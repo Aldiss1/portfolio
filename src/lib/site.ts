@@ -11,7 +11,7 @@ export const site = {
     "Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun web dari frontend sampai backend.",
   location: "Malang, Indonesia",
   email: "aldisuryasaputra693@gmail.com",
-  url: "https://portfolio-one-beryl-62.vercel.app",
+  url: "https://aldisuryasaputra.vercel.app",
   available: true,
   availableLabel: "Terbuka untuk magang",
   resume: "/resume.pdf",
