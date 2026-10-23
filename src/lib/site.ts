@@ -55,7 +55,7 @@ export const socials: {
   label: string;
   href: string;
 }[] = [
-  { key: "github", label: "GitHub", href: "https://github.com/aldisuryas" },
+  { key: "github", label: "GitHub", href: "https://github.com/Aldiss1" },
   { key: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/aldisuryas" },
   { key: "x", label: "X", href: "https://x.com/aldisuryas" },
   { key: "email", label: "Email", href: `mailto:${site.email}` },
