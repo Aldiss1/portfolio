@@ -53,5 +53,3 @@ src/
 ## Deploy
 
 Langsung jalan di Vercel. Set `site.url` di `src/lib/site.ts` ke domain aslimu supaya metadata, sitemap, dan robots mengarah ke alamat yang benar.
-
-# vercel
