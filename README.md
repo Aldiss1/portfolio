@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Portfolio personal yang ringan dan cepat, dibangun dengan Next.js 16 (App Router), Tailwind CSS v4, dan shadcn/ui.
 
-First, run the development server:
+## Stack
+
+| Lapisan | Pilihan |
+| --- | --- |
+| Framework | Next.js 16.4 (App Router, Turbopack, Cache Components) |
+| Bahasa | TypeScript |
+| Styling | Tailwind CSS v4 (token `@theme` di `globals.css`) |
+| Komponen | shadcn/ui (primitive Base UI) + lucide-react |
+| Animasi | `motion` (penerus Framer Motion) + `lenis` smooth scroll |
+| Tema | next-themes (terang / gelap / sistem) |
+
+## Perintah
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # jalankan dev server di :3000
+npm run build   # build produksi
+npm run start   # sajikan hasil build
+npm run lint    # eslint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Struktur
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── layout.tsx              # provider, font, metadata, header/footer
+│   ├── page.tsx                # beranda: hero → tentang → karya
+│   ├── projects/[slug]/        # halaman detail proyek (prerendered)
+│   ├── sitemap.ts, robots.ts   # file SEO yang digenerate
+│   └── globals.css             # token desain + utility kustom
+├── components/
+│   ├── ui/                     # primitive shadcn
+│   ├── sections/               # hero, tentang, karya
+│   ├── motion/reveal.tsx       # pembungkus animasi saat masuk viewport
+│   └── site-header/footer.tsx
+└── lib/
+    ├── site.ts                 # nama, bio, statistik, skill, sosial  ← ubah di sini
+    ├── projects.ts             # daftar proyek                         ← ubah di sini
+    └── utils.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Kustomisasi
 
-## Learn More
+1. **Data diri** — ubah `src/lib/site.ts` (nama, email, sosial, bio, skill, navigasi).
+2. **Proyek** — ubah `src/lib/projects.ts`. Menambah satu entri otomatis memperbarui grid di beranda, halaman detail, sitemap, dan metadata halaman.
+3. **Warna** — ubah `--brand` (dan token lain) di `src/app/globals.css`.
+4. **CV** — taruh PDF di `public/resume.pdf` bila ingin menautkannya.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Langsung jalan di Vercel. Set `site.url` di `src/lib/site.ts` ke domain aslimu supaya metadata, sitemap, dan robots mengarah ke alamat yang benar.
