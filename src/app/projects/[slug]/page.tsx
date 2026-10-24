@@ -110,6 +110,12 @@ export default async function ProjectPage({
             </div>
           </Reveal>
         ) : null}
+
+        {project.note ? (
+          <Reveal delay={0.25}>
+            <p className="mt-6 text-sm text-muted-foreground">{project.note}</p>
+          </Reveal>
+        ) : null}
       </header>
 
       <Separator className="my-12" />
