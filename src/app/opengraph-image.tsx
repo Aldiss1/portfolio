@@ -50,14 +50,14 @@ export default function Image() {
           <span
             style={{
               color: "#fafafa",
-              fontSize: 58,
+              fontSize: 64,
               fontWeight: 600,
               lineHeight: 1.15,
               letterSpacing: "-0.02em",
-              maxWidth: 900,
+              maxWidth: 940,
             }}
           >
-            {site.tagline}
+            Membangun web dari tampilan sampai database.
           </span>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div
