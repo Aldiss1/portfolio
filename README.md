@@ -49,6 +49,7 @@ src/
 2. **Proyek** — ubah `src/lib/projects.ts`. Menambah satu entri otomatis memperbarui grid di beranda, halaman detail, sitemap, dan metadata halaman.
 3. **Warna** — ubah `--brand` (dan token lain) di `src/app/globals.css`.
 4. **CV** — taruh PDF di `public/resume.pdf` bila ingin menautkannya.
+5. **Foto profil** — taruh fotomu di `public/foto-profil.jpg` (rasio 4:5, minimal 800 × 1000 px), lalu ubah `photo` di `src/lib/site.ts` menjadi `"/foto-profil.jpg"`. Selama masih `null`, hero menampilkan placeholder bertema.
 
 ## Deploy
 
