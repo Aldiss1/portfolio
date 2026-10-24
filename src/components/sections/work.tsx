@@ -10,7 +10,7 @@ export function Work() {
         <SectionHeading
           eyebrow="02 — Karya pilihan"
           title="Beberapa hal yang sudah saya bangun."
-          description="Proyek dari tugas besar, kegiatan organisasi, magang, dan inisiatif pribadi. Setiap proyek punya konteks dan pelajarannya sendiri."
+          description="Proyek berskala besar yang saya kerjakan bersama tim — dari aplikasi mobile berbasis machine learning sampai sistem informasi dan platform pemesanan berbasis Laravel. Semuanya ada di GitHub."
         />
         <Reveal delay={0.1}>
           <span className="font-mono text-xs text-muted-foreground">
@@ -19,9 +19,9 @@ export function Work() {
         </Reveal>
       </div>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <Reveal key={project.slug} delay={(index % 2) * 0.08}>
+          <Reveal key={project.slug} delay={(index % 3) * 0.08}>
             <ProjectCard project={project} index={index} className="h-full" />
           </Reveal>
         ))}

@@ -22,11 +22,11 @@ export const site = {
 
 export const bio = [
   "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang. Ketertarikan saya ada di pengembangan web — mulai dari merancang tampilan, menulis kode frontend, sampai menyambungkannya ke database di sisi backend.",
-  "Sebagian besar pengalaman saya datang dari tugas besar, praktikum, dan proyek organisasi: membangun aplikasi CRUD, sistem informasi sederhana, sampai website kegiatan himpunan. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
+  "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: sistem informasi laboratorium, platform pemesanan paket wisata, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
 ] as const;
 
 export const stats = [
-  { label: "Proyek yang dikerjakan", value: "8+" },
+  { label: "Proyek besar dikerjakan", value: "3" },
   { label: "Sertifikat & pelatihan", value: "3" },
   { label: "Teknologi dipelajari", value: "10+" },
 ] as const;
@@ -38,11 +38,15 @@ export const skills = [
   },
   {
     title: "Framework",
-    items: ["React", "Next.js", "Laravel", "Tailwind CSS"],
+    items: ["React", "Next.js", "Laravel", "Filament", "Tailwind CSS"],
+  },
+  {
+    title: "Mobile",
+    items: ["Flutter", "Dart"],
   },
   {
     title: "Database",
-    items: ["MySQL", "PostgreSQL"],
+    items: ["MySQL", "PostgreSQL", "SQLite"],
   },
   {
     title: "Perkakas",
