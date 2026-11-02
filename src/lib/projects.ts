@@ -91,6 +91,10 @@ export const projects: Project[] = [
         label: "Kunjungi situs",
         href: "https://labse.web.id",
       },
+      {
+        label: "Lihat repositori",
+        href: "https://github.com/Aldiss1/PBL_SE-TI_2E-",
+      },
     ],
     image: {
       src: "/projects/lab-se.png",
@@ -98,7 +102,6 @@ export const projects: Project[] = [
       width: 1440,
       height: 1000,
     },
-    note: "Repositori privat — memuat dokumen internal laboratorium.",
   },
   {
     slug: "pendaftaran-smkn-2-singosari",
