@@ -8,9 +8,9 @@ export function Work() {
     <section id="work" className="container-page scroll-mt-24 py-16 sm:py-20">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
-          eyebrow="02 — Karya pilihan"
+          eyebrow="03 — Karya pilihan"
           title="Beberapa hal yang sudah saya bangun."
-          description="Proyek berskala besar yang saya kerjakan bersama tim — dari aplikasi mobile berbasis machine learning sampai sistem informasi dan platform pemesanan berbasis Laravel. Semuanya ada di GitHub."
+          description="Dari aplikasi mobile berbasis machine learning sampai sistem informasi dan platform pemesanan — beberapa kodenya bisa dilihat di GitHub, dan yang sudah berjalan bisa dikunjungi langsung di situsnya."
         />
         <Reveal delay={0.1}>
           <span className="font-mono text-xs text-muted-foreground">

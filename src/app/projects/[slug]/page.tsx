@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeftIcon, ArrowUpRightIcon, CheckIcon } from "lucide-react";
@@ -117,6 +118,21 @@ export default async function ProjectPage({
           </Reveal>
         ) : null}
       </header>
+
+      {project.image ? (
+        <Reveal delay={0.1} className="mt-12">
+          <div className="overflow-hidden rounded-2xl border border-border/80 bg-muted/30">
+            <Image
+              src={project.image.src}
+              alt={project.image.alt}
+              width={project.image.width}
+              height={project.image.height}
+              sizes="(max-width: 1024px) 100vw, 1100px"
+              className="h-auto w-full"
+            />
+          </div>
+        </Reveal>
+      ) : null}
 
       <Separator className="my-12" />
 

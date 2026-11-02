@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ProfilePhoto } from "@/components/profile-photo";
 import { Separator } from "@/components/ui/separator";
-import { socials, site, stats } from "@/lib/site";
+import { socials, site } from "@/lib/site";
 
 const iconMap = {
   github: GithubIcon,
@@ -120,21 +120,6 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.3} className="mt-20">
-          <div className="rule-fade" />
-          <dl className="grid grid-cols-1 gap-6 pt-8 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-1">
-                <dt className="order-2 text-sm text-muted-foreground">
-                  {stat.label}
-                </dt>
-                <dd className="order-1 text-2xl font-semibold tracking-tight">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
       </div>
     </section>
   );

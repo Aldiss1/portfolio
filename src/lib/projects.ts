@@ -11,6 +11,8 @@ export type Project = {
   /** Catatan kecil di halaman detail, mis. alasan repositori tidak ditautkan. */
   note?: string;
   featured?: boolean;
+  /** Screenshot di halaman detail. File disimpan di `public/`. */
+  image?: { src: string; alt: string; width: number; height: number };
 };
 
 /**
@@ -84,7 +86,42 @@ export const projects: Project[] = [
       "Menerapkan lapisan anti-injection dan validasi input di seluruh endpoint PHP.",
     ],
     stack: ["PHP", "PostgreSQL", "Bootstrap", "JavaScript"],
+    links: [
+      {
+        label: "Kunjungi situs",
+        href: "https://labse.web.id",
+      },
+    ],
+    image: {
+      src: "/projects/lab-se.png",
+      alt: "Tampilan beranda Web Profile Laboratorium Software Engineering",
+      width: 1440,
+      height: 1000,
+    },
     note: "Repositori privat — memuat dokumen internal laboratorium.",
+  },
+  {
+    slug: "pendaftaran-smkn-2-singosari",
+    title: "Pendaftaran Siswa Baru SMKN 2 Singosari",
+    year: "2023",
+    role: "Tugas akhir SMK — full stack",
+    summary:
+      "Sistem pendaftaran siswa baru untuk SMKN 2 Singosari, dikerjakan full stack dengan Laravel.",
+    description: [
+      "Tugas akhir saat SMK ini adalah sistem pendaftaran siswa baru untuk SMKN 2 Singosari. Calon siswa dapat mendaftar dan mengelola data pendaftarannya lewat web, sehingga proses pendaftaran tidak perlu dilakukan secara manual.",
+      "Saya mengerjakan bagian full stack, mulai dari tampilan hingga logika di sisi server.",
+    ],
+    highlights: [
+      "Mengerjakan aplikasi web pendaftaran siswa baru secara full stack, dari tampilan hingga logika di sisi server.",
+    ],
+    stack: ["Laravel"],
+    links: [
+      {
+        label: "Lihat repositori",
+        href: "https://github.com/Aldiss1/Tugas-TA",
+      },
+    ],
+    featured: false,
   },
 ];
 

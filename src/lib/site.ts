@@ -25,12 +25,6 @@ export const bio = [
   "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: sistem informasi laboratorium, platform pemesanan paket wisata, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
 ] as const;
 
-export const stats = [
-  { label: "Proyek besar dikerjakan", value: "3" },
-  { label: "Sertifikat & pelatihan", value: "3" },
-  { label: "Teknologi dipelajari", value: "10+" },
-] as const;
-
 export const skills = [
   {
     title: "Web",
@@ -54,6 +48,22 @@ export const skills = [
   },
 ] as const;
 
+export const experiences = [
+  {
+    type: "Magang",
+    period: "Juli – Desember 2023",
+    title: "Software Engineer Intern",
+    organization: "Software House JV Partner",
+    description: "Membuat frontend website Tukan Indonesia selama masa magang.",
+  },
+  {
+    type: "Organisasi",
+    title: "Ketua Departemen Internal",
+    organization: "HMTI — Himpunan Mahasiswa Teknologi Informasi",
+    description: "Memimpin departemen internal HMTI Politeknik Negeri Malang.",
+  },
+] as const;
+
 export type SocialKey = "github" | "linkedin" | "x" | "email";
 
 export const socials: {
@@ -69,5 +79,6 @@ export const socials: {
 
 export const nav = [
   { label: "Tentang", href: "/#about" },
+  { label: "Pengalaman", href: "/#experience" },
   { label: "Karya", href: "/#work" },
 ] as const;
