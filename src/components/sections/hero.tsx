@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRightIcon, MapPinIcon } from "lucide-react";
+import { ArrowRightIcon, DownloadIcon, MapPinIcon } from "lucide-react";
 
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons";
 
@@ -56,6 +56,15 @@ export function Hero() {
                 <ButtonLink size="lg" href="/#work">
                   Lihat karya
                   <ArrowRightIcon data-icon="inline-end" />
+                </ButtonLink>
+                <ButtonLink
+                  size="lg"
+                  variant="outline"
+                  external
+                  href={site.resume}
+                >
+                  <DownloadIcon data-icon="inline-start" />
+                  Unduh CV
                 </ButtonLink>
                 <ButtonLink
                   size="lg"
