@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRightIcon, MapPinIcon } from "lucide-react";
 
-import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons";
+
 import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ProfilePhoto } from "@/components/profile-photo";
@@ -11,7 +12,7 @@ import { socials, site } from "@/lib/site";
 const iconMap = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
-  x: XIcon,
+  instagram: InstagramIcon,
   email: null,
 } as const;
 

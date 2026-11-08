@@ -14,7 +14,7 @@ export const site = {
   url: "https://aldisuryasaputra.vercel.app",
   available: true,
   availableLabel: "Terbuka untuk magang",
-  photo: null as string | null,
+  photo: "/foto.png" as string | null,
   photoAlt: "Foto profil Aldi Surya Saputra",
   resume: "/resume.pdf",
   copyrightYear: 2026,
@@ -64,7 +64,7 @@ export const experiences = [
   },
 ] as const;
 
-export type SocialKey = "github" | "linkedin" | "x" | "email";
+export type SocialKey = "github" | "linkedin" | "instagram" | "email";
 
 export const socials: {
   key: SocialKey;
@@ -72,8 +72,8 @@ export const socials: {
   href: string;
 }[] = [
   { key: "github", label: "GitHub", href: "https://github.com/Aldiss1" },
-  { key: "linkedin", label: "LinkedIn", href: "https://linkedin.com/in/aldisuryas" },
-  { key: "x", label: "X", href: "https://x.com/aldisuryas" },
+  { key: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/aldisuryasaputra/" },
+  { key: "instagram", label: "Instagram", href: "https://www.instagram.com/_aldis16/" },
   { key: "email", label: "Email", href: `mailto:${site.email}` },
 ];
 

@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons";
+import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons";
 import { socials, site } from "@/lib/site";
 import { MailIcon } from "lucide-react";
 
 const iconMap = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
-  x: XIcon,
+  instagram: InstagramIcon,
   email: MailIcon,
 } as const;
 

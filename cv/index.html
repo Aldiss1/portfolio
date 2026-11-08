@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>CV — Aldi Surya Saputra</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #1a1d23;
+    --muted: #555b66;
+    --line: #dfe2e8;
+    --brand: #1a1d23;
+  }
+  html, body { background: #fff; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.2pt;
+    line-height: 1.35;
+    -webkit-print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    padding: 10mm 14mm;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  header { border-bottom: 2.5px solid var(--ink); padding-bottom: 4mm; }
+  h1 { font-size: 20pt; letter-spacing: 0.2px; }
+  .role { font-size: 10.5pt; color: var(--brand); font-weight: 600; margin-top: 0.5mm; }
+  .contact { margin-top: 2mm; font-size: 8.8pt; color: var(--muted); }
+  .contact span { white-space: nowrap; }
+  .contact span + span::before { content: " · "; color: var(--line); }
+
+  /* Sections */
+  section { margin-top: 3.2mm; }
+  h2 {
+    font-size: 10pt; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--ink); padding-bottom: 1mm; border-bottom: 1px solid var(--line);
+    margin-bottom: 2mm;
+  }
+  .summary { color: var(--ink); }
+
+  /* Entries */
+  .entry { margin-bottom: 1.9mm; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .entry-title { font-weight: 700; font-size: 10pt; }
+  .entry-meta { font-size: 8.6pt; color: var(--muted); white-space: nowrap; padding-left: 4mm; }
+  .entry-sub { font-size: 9.2pt; color: var(--muted); }
+  .entry-sub strong { color: var(--ink); font-weight: 600; }
+  ul { margin-top: 1mm; padding-left: 4.5mm; }
+  li { margin-bottom: 0.6mm; }
+  li::marker { color: var(--brand); }
+  .stack { color: var(--muted); font-size: 8.6pt; margin-top: 0.6mm; }
+  .stack b { color: var(--ink); font-weight: 600; }
+
+  /* Skills */
+  .skill-row { display: flex; margin-bottom: 0.9mm; }
+  .skill-label { width: 24mm; flex-shrink: 0; font-weight: 600; }
+  .skill-items { color: var(--muted); }
+
+  /* Education */
+  .edu { display: flex; justify-content: space-between; align-items: baseline; }
+
+  a { color: var(--ink); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Aldi Surya Saputra</h1>
+    <div class="role">Mahasiswa Teknik Informatika — Web &amp; Mobile Development</div>
+    <div class="contact">
+      <span>Malang, Indonesia</span>
+      <span>aldisuryasaputra693@gmail.com</span>
+      <span>github.com/Aldiss1</span>
+      <span>linkedin.com/in/aldisuryasaputra</span>
+      <span>aldisuryasaputra.vercel.app</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Ringkasan</h2>
+    <p class="summary">
+      Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun web dari frontend sampai
+      backend. Terbiasa bekerja dalam tim melalui proyek berbasis mata kuliah: sistem informasi
+      laboratorium, platform pemesanan paket wisata, hingga aplikasi mobile dengan machine learning
+      yang berjalan offline. Sedang mencari kesempatan magang untuk berkembang di tim engineering nyata.
+    </p>
+  </section>
+
+  <section>
+    <h2>Pengalaman</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Software Engineer Intern</span>
+        <span class="entry-meta">Juli – Desember 2023</span>
+      </div>
+      <div class="entry-sub"><strong>Software House JV Partner</strong> — Magang</div>
+      <ul>
+        <li>Membangun frontend website Tukan Indonesia dari awal hingga rilis selama masa magang.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Ketua Departemen Internal</span>
+        <span class="entry-meta">2026/2027</span>
+      </div>
+      <div class="entry-sub"><strong>HMTI — Himpunan Mahasiswa Teknologi Informasi</strong>, Politeknik Negeri Malang</div>
+      <ul>
+        <li>Memimpin departemen internal HMTI Polinema: mengoordinasikan agenda, membagi tugas, dan menjaga komunikasi antar anggota.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Proyek</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">SmartReceipt Analyzer — Aplikasi Struk Offline</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, 6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.</li>
+        <li>Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR tidak rapi, plus dashboard analitik pengeluaran.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Trip Web — Platform Pemesanan Paket Wisata</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Mengerjakan backend &amp; panel admin Laravel + Filament: destinasi, jadwal, promo, booking, testimoni, dan ekspor laporan Excel.</li>
+        <li>Membuat command terjadwal yang otomatis membatalkan booking kedaluwarsa dan melepas kembali kuotanya.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> Laravel, PHP, Filament, MySQL, Tailwind CSS</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Sistem Informasi Lab Software Engineering</span>
+        <span class="entry-meta">2025</span>
+      </div>
+      <ul>
+        <li>Membangun panel admin (anggota, penelitian, publikasi, blog, roadmap) beserta lapisan basis datanya.</li>
+        <li>Menulis stored procedure dan materialized view PostgreSQL agar laporan berat tidak membebani query harian; online di labse.web.id.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> PHP, PostgreSQL, Bootstrap, JavaScript</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Sistem Pendaftaran Siswa Baru SMKN 2 Singosari</span>
+        <span class="entry-meta">2023</span>
+      </div>
+      <ul>
+        <li>Mengerjakan aplikasi pendaftaran siswa baru secara full stack (tugas akhir SMK), dari tampilan hingga logika server.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> Laravel, MySQL</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Keahlian</h2>
+    <div class="skill-row"><span class="skill-label">Web</span><span class="skill-items">HTML, CSS, JavaScript, TypeScript, PHP</span></div>
+    <div class="skill-row"><span class="skill-label">Framework</span><span class="skill-items">React, Next.js, Laravel, Filament, Tailwind CSS</span></div>
+    <div class="skill-row"><span class="skill-label">Mobile</span><span class="skill-items">Flutter, Dart</span></div>
+    <div class="skill-row"><span class="skill-label">Database</span><span class="skill-items">MySQL, PostgreSQL, SQLite</span></div>
+    <div class="skill-row"><span class="skill-label">Perkakas</span><span class="skill-items">Git, GitHub, Figma, VS Code, Postman</span></div>
+  </section>
+
+  <section>
+    <h2>Pendidikan</h2>
+    <div class="edu">
+      <div>
+        <span class="entry-title">D4 Teknik Informatika</span>
+        <div class="entry-sub"><strong>Politeknik Negeri Malang</strong></div>
+      </div>
+      <span class="entry-meta">2024 – sekarang</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
