@@ -20,13 +20,29 @@ export const site = {
   copyrightYear: 2026,
 } as const;
 
-export const education = {
-  level: "D4 Teknik Informatika",
-  school: "Politeknik Negeri Malang",
-  period: "2024 — sekarang",
-  gpa: "3,53",
-  gpaScale: "skala 4,00",
-} as const;
+export type EducationEntry = {
+  level: string;
+  school: string;
+  period: string;
+  /** IPK hanya relevan untuk jenjang yang masih berjalan. */
+  gpa?: string;
+  gpaScale?: string;
+};
+
+export const education: EducationEntry[] = [
+  {
+    level: "D4 Teknik Informatika",
+    school: "Politeknik Negeri Malang",
+    period: "2024 — sekarang",
+    gpa: "3,53",
+    gpaScale: "skala 4,00",
+  },
+  {
+    level: "Rekayasa Perangkat Lunak",
+    school: "SMKN 2 Singosari",
+    period: "lulus 2024",
+  },
+];
 
 export const bio = [
   "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang dengan fokus pengembangan web di ekosistem Laravel — mulai dari merancang skema database, membangun backend dengan Eloquent, sampai menyusun panel admin memakai Filament.",
@@ -66,6 +82,7 @@ export const experiences = [
   },
   {
     type: "Organisasi",
+    period: "Februari 2026 — Februari 2027",
     title: "Ketua Departemen Internal",
     organization: "HMTI — Himpunan Mahasiswa Teknologi Informasi",
     description: "Memimpin departemen internal HMTI Politeknik Negeri Malang.",
