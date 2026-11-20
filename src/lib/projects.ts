@@ -3,6 +3,8 @@ export type Project = {
   title: string;
   year: string;
   role: string;
+  /** Kata kunci pendek untuk elemen tipografis besar di baris karya. */
+  keyword: string;
   summary: string;
   description: string[];
   highlights: string[];
@@ -24,6 +26,7 @@ export const projects: Project[] = [
     slug: "smartreceipt",
     title: "SmartReceipt Analyzer",
     year: "2026",
+    keyword: "OCR",
     role: "Proyek PBL — tim pengembang aplikasi",
     summary:
       "Aplikasi mobile untuk memindai struk belanja, mengenali item lewat OCR, dan mengelompokkan pengeluaran secara otomatis — seluruhnya berjalan offline.",
@@ -51,6 +54,7 @@ export const projects: Project[] = [
     slug: "trip-web",
     title: "Trip Web",
     year: "2026",
+    keyword: "TRIP",
     role: "Proyek tim — backend & panel admin",
     summary:
       "Aplikasi pemesanan paket wisata: katalog destinasi, jadwal keberangkatan, promo, dan pengelolaan booking lewat satu panel admin.",
@@ -72,6 +76,7 @@ export const projects: Project[] = [
     slug: "lab-se",
     title: "Sistem Informasi Lab SE",
     year: "2025",
+    keyword: "LAB",
     role: "Proyek PBL — pengembang web",
     summary:
       "Sistem informasi laboratorium Software Engineering untuk mengelola anggota, penelitian, publikasi, dan konten profil dalam satu panel admin.",
@@ -107,6 +112,7 @@ export const projects: Project[] = [
     slug: "pendaftaran-smkn-2-singosari",
     title: "Pendaftaran Siswa Baru SMKN 2 Singosari",
     year: "2023",
+    keyword: "PSB",
     role: "Tugas akhir SMK — full stack",
     summary:
       "Sistem pendaftaran siswa baru untuk SMKN 2 Singosari, dikerjakan full stack dengan Laravel.",

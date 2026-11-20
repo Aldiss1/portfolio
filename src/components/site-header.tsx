@@ -7,6 +7,7 @@ import { SiteClock } from "@/components/site-clock";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -78,13 +79,13 @@ export function SiteHeader() {
                 aria-label="Navigasi seluler"
               >
                 {nav.map((item) => (
-                  <Link
+                  <SheetClose
                     key={item.href}
-                    href={item.href}
-                    className="border-b border-border py-3 font-mono text-xs uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-accent"
+                    render={<Link href={item.href} />}
+                    className="border-b border-border py-3 text-left font-mono text-xs uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-accent"
                   >
                     {item.label}
-                  </Link>
+                  </SheetClose>
                 ))}
               </nav>
             </SheetContent>
