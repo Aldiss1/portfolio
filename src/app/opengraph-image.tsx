@@ -16,8 +16,9 @@ export default function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0a0a0a",
-          padding: "80px",
+          background: "#ffffff",
+          color: "#111111",
+          padding: "72px",
           fontFamily: "sans-serif",
         }}
       >
@@ -26,9 +27,8 @@ export default function Image() {
             style={{
               width: 64,
               height: 64,
-              borderRadius: 16,
-              background: "#fafafa",
-              color: "#0a0a0a",
+              background: "#E30613",
+              color: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -39,37 +39,32 @@ export default function Image() {
             {site.initials}
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ color: "#fafafa", fontSize: 30, fontWeight: 600 }}>
+            <span style={{ color: "#111111", fontSize: 30, fontWeight: 600 }}>
               {site.name}
             </span>
-            <span style={{ color: "#a1a1a1", fontSize: 22 }}>{site.role}</span>
+            <span style={{ color: "#6f6f6f", fontSize: 22 }}>{site.role}</span>
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+          <div style={{ height: 2, background: "#111111" }} />
           <span
             style={{
-              color: "#fafafa",
-              fontSize: 64,
-              fontWeight: 600,
-              lineHeight: 1.15,
-              letterSpacing: "-0.02em",
-              maxWidth: 940,
+              color: "#111111",
+              fontSize: 68,
+              fontWeight: 800,
+              lineHeight: 1.05,
+              letterSpacing: "-0.03em",
+              maxWidth: 980,
+              textTransform: "uppercase",
             }}
           >
             Membangun web dari tampilan sampai database.
           </span>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div
-              style={{
-                width: 10,
-                height: 10,
-                borderRadius: 999,
-                background: "#6366f1",
-              }}
-            />
-            <span style={{ color: "#a1a1a1", fontSize: 24 }}>
-              {site.location}
+            <div style={{ width: 12, height: 12, background: "#E30613" }} />
+            <span style={{ color: "#6f6f6f", fontSize: 24 }}>
+              {site.location} — {site.url.replace(/^https?:\/\//, "")}
             </span>
           </div>
         </div>
