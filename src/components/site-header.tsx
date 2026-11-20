@@ -81,6 +81,7 @@ export function SiteHeader() {
                 {nav.map((item) => (
                   <SheetClose
                     key={item.href}
+                    nativeButton={false}
                     render={<Link href={item.href} />}
                     className="border-b border-border py-3 text-left font-mono text-xs uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-accent"
                   >

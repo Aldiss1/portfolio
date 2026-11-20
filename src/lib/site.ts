@@ -14,7 +14,7 @@ export const site = {
   url: "https://aldisuryasaputra.vercel.app",
   available: true,
   availableLabel: "Terbuka untuk magang",
-  photo: "/foto.png" as string | null,
+  photo: "/foto.webp" as string | null,
   photoAlt: "Foto profil Aldi Surya Saputra",
   resume: "/resume.pdf",
   copyrightYear: 2026,

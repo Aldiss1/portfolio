@@ -118,6 +118,7 @@ export default async function ProjectPage({
               width={project.image.width}
               height={project.image.height}
               sizes="(max-width: 1024px) 100vw, 1200px"
+              priority
               className="h-auto w-full"
             />
           </div>
