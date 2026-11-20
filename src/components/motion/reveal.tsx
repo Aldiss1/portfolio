@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
 type RevealProps = {
@@ -15,7 +15,14 @@ type RevealProps = {
 
 /**
  * Fades content in the first time it scrolls into view.
- * Falls back to a plain, static render for reduced-motion visitors.
+ *
+ * Markup is identical on server and client on purpose: branching on
+ * `useReducedMotion()` during render makes the client drop the inline
+ * `opacity: 0` style that the server emitted, which React reports as a
+ * hydration mismatch and never patches — leaving the content invisible.
+ * Reduced-motion visitors are handled by `<MotionConfig reducedMotion="user">`
+ * in the root layout, which drops the positional animation after mount while
+ * keeping a short fade.
  */
 export function Reveal({
   children,
@@ -24,16 +31,6 @@ export function Reveal({
   className,
   id,
 }: RevealProps) {
-  const reducedMotion = useReducedMotion();
-
-  if (reducedMotion) {
-    return (
-      <div id={id} className={className}>
-        {children}
-      </div>
-    );
-  }
-
   return (
     <motion.div
       id={id}
