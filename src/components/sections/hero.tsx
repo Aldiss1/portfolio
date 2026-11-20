@@ -1,58 +1,55 @@
-import Link from "next/link";
-import { ArrowRightIcon, DownloadIcon, MapPinIcon } from "lucide-react";
-
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "@/components/icons";
+import { ArrowRightIcon, DownloadIcon } from "lucide-react";
 
 import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ProfilePhoto } from "@/components/profile-photo";
-import { Separator } from "@/components/ui/separator";
-import { socials, site } from "@/lib/site";
+import { education, site } from "@/lib/site";
+import { projects } from "@/lib/projects";
 
-const iconMap = {
-  github: GithubIcon,
-  linkedin: LinkedinIcon,
-  instagram: InstagramIcon,
-  email: null,
-} as const;
+const stats = [
+  { value: education.gpa, label: `IPK / ${education.gpaScale}`, accent: true },
+  { value: String(projects.length), label: "Proyek" },
+  { value: "1", label: "Magang" },
+  { value: "2024—", label: "Sekarang" },
+];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-grid" />
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-glow" />
-
-      <div className="container-page pt-16 pb-20 sm:pt-24 sm:pb-24">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-16">
-          <div>
+    <section className="relative">
+      <div className="container-page pt-10 pb-16 sm:pt-14 sm:pb-20">
+        <Reveal>
+          <div className="flex flex-wrap items-center justify-between gap-3 font-mono text-[0.7rem] uppercase tracking-[0.14em]">
             {site.available ? (
-              <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
-                  <span className="size-1.5 rounded-full bg-accent animate-pulse-dot" />
-                  {site.availableLabel}
-                </span>
-              </Reveal>
-            ) : null}
+              <span className="inline-flex items-center gap-2">
+                <span aria-hidden className="size-2 bg-accent" />
+                {site.availableLabel}
+              </span>
+            ) : (
+              <span />
+            )}
+            <span className="text-muted-foreground">
+              {site.location} — {site.email}
+            </span>
+          </div>
+        </Reveal>
 
-            <Reveal delay={0.06}>
-              <h1 className="mt-6 text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl">
-                {site.name}
+        <div className="mt-10 grid gap-12 lg:grid-cols-[1.55fr_1fr] lg:items-end lg:gap-16">
+          <div>
+            <Reveal delay={0.05}>
+              <h1 className="text-[clamp(3rem,9vw,7.5rem)] leading-[0.94] font-extrabold tracking-[-0.03em] uppercase stretch-display">
+                Aldi Surya
+                <br className="hidden sm:block" /> Saputra
               </h1>
             </Reveal>
 
-            <Reveal delay={0.12}>
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-                {site.role} di Politeknik Negeri Malang yang senang mengubah ide
-                menjadi aplikasi web —{" "}
-                <span className="text-foreground">
-                  dari merancang tampilan, menulis kode, sampai menyambungkannya
-                  ke database.
-                </span>
+            <Reveal delay={0.1}>
+              <p className="mt-6 text-lg font-medium sm:text-xl">
+                {site.role} — Politeknik Negeri Malang
               </p>
             </Reveal>
 
-            <Reveal delay={0.18}>
-              <div className="mt-9 flex flex-wrap items-center gap-3">
+            <Reveal delay={0.15}>
+              <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink size="lg" href="/#work">
                   Lihat karya
                   <ArrowRightIcon data-icon="inline-end" />
@@ -66,70 +63,42 @@ export function Hero() {
                   <DownloadIcon data-icon="inline-start" />
                   Unduh CV
                 </ButtonLink>
-                <ButtonLink
-                  size="lg"
-                  variant="outline"
-                  href={`mailto:${site.email}`}
-                >
-                  Kirim email
-                </ButtonLink>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.24}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <MapPinIcon className="size-4" />
-                  {site.location}
-                </span>
-                <Separator
-                  orientation="vertical"
-                  className="hidden h-4 sm:block"
-                />
-                <Link
-                  href={`mailto:${site.email}`}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {site.email}
-                </Link>
-                <Separator
-                  orientation="vertical"
-                  className="hidden h-4 sm:block"
-                />
-                <div className="flex items-center gap-1">
-                  {socials.map((social) => {
-                    const Icon = iconMap[social.key];
-                    return (
-                      <Link
-                        key={social.key}
-                        href={social.href}
-                        target={
-                          social.href.startsWith("mailto:")
-                            ? undefined
-                            : "_blank"
-                        }
-                        rel="noreferrer noopener"
-                        aria-label={social.label}
-                        className="grid size-8 place-items-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                      >
-                        {Icon ? (
-                          <Icon className="size-4" />
-                        ) : (
-                          <span className="text-xs font-medium">@</span>
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
               </div>
             </Reveal>
           </div>
 
-          <Reveal delay={0.2} className="mx-auto w-full max-w-[320px] lg:mx-0">
+          <Reveal delay={0.12} className="mx-auto w-full max-w-[360px] lg:mx-0">
             <ProfilePhoto />
           </Reveal>
         </div>
 
+        <Reveal delay={0.2}>
+          <dl className="mt-14 grid grid-cols-2 border-t border-border sm:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                className={
+                  index === 0
+                    ? "border-b border-border py-5 pr-4 sm:border-b-0 sm:border-r sm:pl-0 sm:first:pl-0"
+                    : "border-b border-border py-5 pr-4 sm:border-b-0 sm:border-r sm:pl-4 last:border-r-0 sm:last:pl-4"
+                }
+              >
+                <dt
+                  className={
+                    stat.accent
+                      ? "text-4xl font-bold tracking-tight text-accent stretch-wide"
+                      : "text-4xl font-bold tracking-tight stretch-wide"
+                  }
+                >
+                  {stat.value}
+                </dt>
+                <dd className="mt-1.5 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Reveal>
       </div>
     </section>
   );

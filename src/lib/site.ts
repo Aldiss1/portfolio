@@ -20,6 +20,14 @@ export const site = {
   copyrightYear: 2026,
 } as const;
 
+export const education = {
+  level: "D4 Teknik Informatika",
+  school: "Politeknik Negeri Malang",
+  period: "2024 — sekarang",
+  gpa: "3,53",
+  gpaScale: "skala 4,00",
+} as const;
+
 export const bio = [
   "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang. Ketertarikan saya ada di pengembangan web — mulai dari merancang tampilan, menulis kode frontend, sampai menyambungkannya ke database di sisi backend.",
   "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: sistem informasi laboratorium, platform pemesanan paket wisata, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
@@ -81,4 +89,5 @@ export const nav = [
   { label: "Tentang", href: "/#about" },
   { label: "Pengalaman", href: "/#experience" },
   { label: "Karya", href: "/#work" },
+  { label: "Kontak", href: "/#contact" },
 ] as const;
