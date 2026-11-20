@@ -26,9 +26,7 @@ export function Hero() {
             ) : (
               <span />
             )}
-            <span className="text-muted-foreground">
-              {site.location} — {site.email}
-            </span>
+            <span className="text-muted-foreground">{site.location}</span>
           </div>
         </Reveal>
 
