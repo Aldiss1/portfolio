@@ -12,6 +12,10 @@ const iconMap = {
 } as const;
 
 export function SiteFooter() {
+  const nameParts = site.name.split(" ");
+  const markLine1 = nameParts.slice(0, 2).join(" ");
+  const markLine2 = nameParts.slice(2).join(" ");
+
   return (
     <footer className="mt-24 border-t border-border">
       <div className="container-page flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
@@ -42,13 +46,57 @@ export function SiteFooter() {
         </Link>
       </div>
 
-      <div className="overflow-hidden">
-        <p
+      <div className="container-page pb-1 sm:pb-0">
+        {/* Wordmark selebar container. Dirender sebagai SVG dengan rasio
+            natural supaya tidak pernah terpotong di lebar layar mana pun;
+            textLength menjaga agar tetap pas meski font gagal dimuat.
+            Satu baris di layar lebar (1338 × 71), dua baris di layar sempit
+            (721 × 165) agar tetap punya bobot. */}
+        <svg
+          viewBox="0 0 1338 71"
+          role="presentation"
           aria-hidden
-          className="container-page font-extrabold uppercase leading-none tracking-tight text-ghost select-none text-[clamp(2.5rem,9.5vw,8.5rem)] whitespace-nowrap stretch-display"
+          className="hidden w-full md:block"
         >
-          {site.name}
-        </p>
+          <text
+            x="0"
+            y="70"
+            textLength="1338"
+            lengthAdjust="spacingAndGlyphs"
+            className="fill-ghost font-extrabold uppercase stretch-display"
+            style={{ fontSize: 100, letterSpacing: "-0.025em" }}
+          >
+            {site.name}
+          </text>
+        </svg>
+
+        <svg
+          viewBox="0 0 721 165"
+          role="presentation"
+          aria-hidden
+          className="block w-full md:hidden"
+        >
+          <text
+            x="0"
+            y="70"
+            textLength="721"
+            lengthAdjust="spacingAndGlyphs"
+            className="fill-ghost font-extrabold uppercase stretch-display"
+            style={{ fontSize: 100, letterSpacing: "-0.025em" }}
+          >
+            {markLine1}
+          </text>
+          <text
+            x="0"
+            y="155"
+            textLength="721"
+            lengthAdjust="spacingAndGlyphs"
+            className="fill-ghost font-extrabold uppercase stretch-display"
+            style={{ fontSize: 100, letterSpacing: "-0.025em" }}
+          >
+            {markLine2}
+          </text>
+        </svg>
       </div>
 
       <div className="container-page flex flex-col gap-2 border-t border-border py-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
