@@ -155,7 +155,7 @@ export default async function ProjectPage({
             <ul className="mt-4 space-y-3">
               {project.highlights.map((highlight) => (
                 <li key={highlight} className="flex gap-2.5 text-sm leading-relaxed">
-                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-brand" />
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
                   <span className="text-foreground/80">{highlight}</span>
                 </li>
               ))}

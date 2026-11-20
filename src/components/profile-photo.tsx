@@ -27,7 +27,7 @@ export function ProfilePhoto({ className, decorative = true }: ProfilePhotoProps
         <>
           <div
             aria-hidden
-            className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-brand/10 blur-3xl"
+            className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-accent/10 blur-3xl"
           />
           <div
             aria-hidden

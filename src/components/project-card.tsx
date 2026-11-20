@@ -26,7 +26,7 @@ export function ProjectCard({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 -right-16 size-48 rounded-full bg-brand/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute -top-24 -right-16 size-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
       />
 
       <div className="relative">

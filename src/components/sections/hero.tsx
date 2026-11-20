@@ -28,7 +28,7 @@ export function Hero() {
             {site.available ? (
               <Reveal>
                 <span className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
-                  <span className="size-1.5 rounded-full bg-brand animate-pulse-dot" />
+                  <span className="size-1.5 rounded-full bg-accent animate-pulse-dot" />
                   {site.availableLabel}
                 </span>
               </Reveal>
