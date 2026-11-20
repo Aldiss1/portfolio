@@ -56,7 +56,7 @@ export function Hero() {
                 <ButtonLink
                   size="lg"
                   variant="outline"
-                  href={`mailto:${site.email}`}
+                  href="/#contact"
                 >
                   <MailIcon data-icon="inline-start" />
                   Kirim email

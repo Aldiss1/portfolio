@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
+import { CopyEmail } from "@/components/copy-email";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { site, socials } from "@/lib/site";
@@ -18,12 +19,7 @@ export function Contact() {
       />
 
       <Reveal delay={0.05}>
-        <a
-          href={`mailto:${site.email}`}
-          className="mt-8 block break-all text-2xl font-bold tracking-tight underline decoration-1 underline-offset-8 transition-colors duration-150 hover:text-accent hover:decoration-accent sm:text-3xl"
-        >
-          {site.email}
-        </a>
+        <CopyEmail email={site.email} />
       </Reveal>
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
