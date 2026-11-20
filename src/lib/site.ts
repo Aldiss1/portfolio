@@ -87,6 +87,7 @@ export const socials: {
 
 export const nav = [
   { label: "Tentang", href: "/#about" },
+  { label: "Pendidikan", href: "/#education" },
   { label: "Pengalaman", href: "/#experience" },
   { label: "Karya", href: "/#work" },
   { label: "Kontak", href: "/#contact" },
