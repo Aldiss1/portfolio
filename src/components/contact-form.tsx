@@ -66,9 +66,9 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-start gap-4 rounded-xl border border-border/80 bg-muted/40 p-6">
-        <span className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
-          <CheckCircle2Icon className="size-5 text-accent" aria-hidden />
+      <div className="flex flex-col items-start gap-4 border border-border p-6">
+        <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em]">
+          <CheckCircle2Icon className="size-4 text-accent" aria-hidden />
           Pesan terkirim
         </span>
         <p className="text-sm leading-relaxed text-muted-foreground">
@@ -150,7 +150,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && errorMessage ? (
-        <p role="alert" className="text-sm text-destructive">
+        <p role="alert" className="text-sm text-accent">
           {errorMessage}
         </p>
       ) : null}

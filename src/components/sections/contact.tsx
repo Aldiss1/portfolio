@@ -11,62 +11,59 @@ export function Contact() {
   );
 
   return (
-    <section id="contact" className="container-page scroll-mt-24 py-16 sm:py-20">
+    <section id="contact" className="container-page scroll-mt-24 py-16 sm:py-24">
       <SectionHeading
-        eyebrow="04 — Kontak"
+        eyebrow="05 — Kontak"
         title="Punya proyek atau tawaran magang? Kirim pesan langsung dari sini."
-        description={
-          <>
-            Formulir ini mengirim email ke{" "}
-            <Link
-              href={`mailto:${site.email}`}
-              className="text-foreground underline-offset-4 hover:underline"
-            >
-              {site.email}
-            </Link>
-            . Bisa juga menghubungi saya lewat sosial media di bawah.
-          </>
-        }
       />
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
-        <Reveal delay={0.06}>
+      <Reveal delay={0.05}>
+        <a
+          href={`mailto:${site.email}`}
+          className="mt-8 block break-all text-2xl font-bold tracking-tight underline decoration-1 underline-offset-8 transition-colors duration-150 hover:text-accent hover:decoration-accent sm:text-3xl"
+        >
+          {site.email}
+        </a>
+      </Reveal>
+
+      <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+        <Reveal delay={0.1}>
           <ContactForm />
         </Reveal>
 
-        <Reveal delay={0.12}>
-          <div className="space-y-8">
-            <div>
+        <Reveal delay={0.15}>
+          <div className="border-t border-border">
+            <div className="flex items-baseline justify-between gap-6 border-b border-border py-3">
               <p className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">
                 Email
               </p>
               <Link
                 href={`mailto:${site.email}`}
-                className="mt-2 block text-base text-foreground underline-offset-4 hover:underline"
+                className="text-sm text-foreground transition-colors hover:text-accent"
               >
                 {site.email}
               </Link>
             </div>
 
-            <div>
+            <div className="flex items-baseline justify-between gap-6 border-b border-border py-3">
               <p className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">
                 Lokasi
               </p>
-              <p className="mt-2 text-base text-foreground">{site.location}</p>
+              <p className="text-sm text-foreground">{site.location}</p>
             </div>
 
-            <div>
+            <div className="flex items-baseline justify-between gap-6 border-b border-border py-3">
               <p className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">
                 Sosial
               </p>
-              <ul className="mt-3 flex flex-wrap gap-2">
+              <ul className="flex flex-wrap justify-end gap-2">
                 {externalSocials.map((social) => (
                   <li key={social.key}>
                     <Link
                       href={social.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="inline-flex rounded-md border border-border/80 bg-muted/40 px-3 py-1.5 text-sm text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
+                      className="inline-flex border border-border px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-foreground transition-colors duration-150 hover:border-accent hover:text-accent"
                     >
                       {social.label}
                     </Link>
@@ -76,8 +73,8 @@ export function Contact() {
             </div>
 
             {site.available ? (
-              <p className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground">
-                <span className="size-1.5 rounded-full bg-accent animate-pulse-dot" />
+              <p className="mt-6 inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.14em]">
+                <span aria-hidden className="size-2 bg-accent" />
                 {site.availableLabel}
               </p>
             ) : null}
