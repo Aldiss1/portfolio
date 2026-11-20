@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { MenuIcon } from "lucide-react";
 
+import { SiteClock } from "@/components/site-clock";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Sheet,
@@ -13,71 +13,75 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { nav, site } from "@/lib/site";
-import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <header
-      className={cn(
-        "sticky top-0 z-50 transition-colors duration-300",
-        scrolled
-          ? "border-b border-border/70 bg-background/80 backdrop-blur-xl"
-          : "border-b border-transparent"
-      )}
+      id="top"
+      className="sticky top-0 z-50 border-b border-border bg-background"
     >
-      <div className="container-page flex h-16 items-center justify-between gap-4">
+      <div className="container-page flex h-16 items-center justify-between gap-6">
         <Link
           href="/"
-          className="group flex items-center gap-2.5"
+          className="group flex items-center gap-3"
           aria-label={`${site.name} — beranda`}
         >
-          <span className="grid size-8 place-items-center rounded-lg bg-foreground text-[0.7rem] font-semibold tracking-wide text-background transition-transform duration-300 group-hover:-rotate-6">
+          <span className="grid size-7 place-items-center bg-accent text-[0.7rem] font-semibold text-accent-foreground">
             {site.initials}
           </span>
-          <span className="text-sm font-medium tracking-tight">{site.name}</span>
+          <span className="font-mono text-xs uppercase tracking-[0.12em]">
+            {site.name}
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Navigasi utama">
+        <nav
+          className="hidden items-center gap-6 md:flex"
+          aria-label="Navigasi utama"
+        >
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="group relative font-mono text-xs uppercase tracking-[0.12em] text-muted-foreground transition-colors duration-150 hover:text-foreground"
             >
               {item.label}
+              <span
+                aria-hidden
+                className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100"
+              />
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-3">
+          <span className="hidden lg:block">
+            <SiteClock />
+          </span>
+
           <ThemeToggle />
 
           <Sheet>
             <SheetTrigger
-              className="inline-flex size-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground md:hidden"
+              className="inline-flex size-8 items-center justify-center border border-border text-muted-foreground transition-colors hover:border-foreground hover:text-foreground md:hidden"
               aria-label="Buka menu"
             >
-              <MenuIcon className="size-5" />
+              <MenuIcon className="size-4" />
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
+            <SheetContent side="right" className="w-72 border-l border-border">
               <SheetHeader>
-                <SheetTitle>{site.name}</SheetTitle>
+                <SheetTitle className="font-mono text-xs uppercase tracking-[0.12em]">
+                  {site.name}
+                </SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-1 px-4" aria-label="Navigasi seluler">
+              <nav
+                className="flex flex-col px-4"
+                aria-label="Navigasi seluler"
+              >
                 {nav.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="rounded-md px-2 py-2.5 text-base text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    className="border-b border-border py-3 font-mono text-xs uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-accent"
                   >
                     {item.label}
                   </Link>

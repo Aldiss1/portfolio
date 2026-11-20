@@ -10,15 +10,15 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="ghost"
+      variant="outline"
       size="icon"
       aria-label="Ganti tema"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       className="text-muted-foreground hover:text-foreground"
     >
       {/* Both icons are rendered; CSS picks the right one so hydration stays clean. */}
-      <MoonIcon className="dark:hidden" />
-      <SunIcon className="hidden dark:block" />
+      <MoonIcon className="size-4 dark:hidden" />
+      <SunIcon className="hidden size-4 dark:block" />
     </Button>
   );
 }
