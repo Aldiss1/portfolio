@@ -64,6 +64,20 @@
 
   /* Education */
   .edu { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu + .edu { margin-top: 1.6mm; }
+
+  /* Cetak: rapatkan agar CV muat satu halaman A4 */
+  @media print {
+    body { font-size: 8.8pt; line-height: 1.32; }
+    .page { padding: 8mm 13mm; }
+    header { padding-bottom: 3mm; }
+    section { margin-top: 2.2mm; }
+    .entry { margin-bottom: 1.2mm; }
+    li { margin-bottom: 0.2mm; }
+    ul { margin-top: 0.8mm; }
+    h2 { margin-bottom: 1.6mm; }
+    .skill-row { margin-bottom: 0.6mm; }
+  }
 
   a { color: var(--ink); text-decoration: none; }
 </style>
@@ -73,7 +87,7 @@
 
   <header>
     <h1>Aldi Surya Saputra</h1>
-    <div class="role">Mahasiswa Teknik Informatika — Web &amp; Mobile Development</div>
+    <div class="role">Mahasiswa Teknik Informatika — Laravel &amp; Filament</div>
     <div class="contact">
       <span>Malang, Indonesia</span>
       <span>aldisuryasaputra693@gmail.com</span>
@@ -86,10 +100,12 @@
   <section>
     <h2>Ringkasan</h2>
     <p class="summary">
-      Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun web dari frontend sampai
-      backend. Terbiasa bekerja dalam tim melalui proyek berbasis mata kuliah: sistem informasi
-      laboratorium, platform pemesanan paket wisata, hingga aplikasi mobile dengan machine learning
-      yang berjalan offline. Sedang mencari kesempatan magang untuk berkembang di tim engineering nyata.
+      Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web dengan
+      Laravel dan Filament — mulai dari merancang skema database, membangun backend dengan Eloquent,
+      sampai menyusun panel admin. Terbiasa bekerja dalam tim melalui proyek berbasis mata kuliah:
+      platform pemesanan paket wisata, sistem informasi laboratorium, hingga aplikasi mobile dengan
+      machine learning yang berjalan offline. Sedang mencari kesempatan magang untuk berkembang di
+      tim engineering nyata.
     </p>
   </section>
 
@@ -108,7 +124,7 @@
     <div class="entry">
       <div class="entry-head">
         <span class="entry-title">Ketua Departemen Internal</span>
-        <span class="entry-meta">2026/2027</span>
+        <span class="entry-meta">Februari 2026 — Februari 2027</span>
       </div>
       <div class="entry-sub"><strong>HMTI — Himpunan Mahasiswa Teknologi Informasi</strong>, Politeknik Negeri Malang</div>
       <ul>
@@ -166,8 +182,8 @@
 
   <section>
     <h2>Keahlian</h2>
-    <div class="skill-row"><span class="skill-label">Web</span><span class="skill-items">HTML, CSS, JavaScript, TypeScript, PHP</span></div>
-    <div class="skill-row"><span class="skill-label">Framework</span><span class="skill-items">React, Next.js, Laravel, Filament, Tailwind CSS</span></div>
+    <div class="skill-row"><span class="skill-label">Web</span><span class="skill-items">PHP, HTML, CSS, JavaScript, TypeScript</span></div>
+    <div class="skill-row"><span class="skill-label">Framework</span><span class="skill-items">Laravel, Filament, React, Next.js, Tailwind CSS</span></div>
     <div class="skill-row"><span class="skill-label">Mobile</span><span class="skill-items">Flutter, Dart</span></div>
     <div class="skill-row"><span class="skill-label">Database</span><span class="skill-items">MySQL, PostgreSQL, SQLite</span></div>
     <div class="skill-row"><span class="skill-label">Perkakas</span><span class="skill-items">Git, GitHub, Figma, VS Code, Postman</span></div>
@@ -182,6 +198,13 @@
         <div class="entry-meta" style="padding-left: 0;">IPK: 3,53 (skala 4,00)</div>
       </div>
       <span class="entry-meta">2024 – sekarang</span>
+    </div>
+    <div class="edu" style="margin-top: 1.9mm;">
+      <div>
+        <span class="entry-title">Rekayasa Perangkat Lunak</span>
+        <div class="entry-sub"><strong>SMKN 2 Singosari</strong></div>
+      </div>
+      <span class="entry-meta">lulus 2024</span>
     </div>
   </section>
 
