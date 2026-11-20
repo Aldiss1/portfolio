@@ -46,7 +46,7 @@ export function SiteFooter() {
         </Link>
       </div>
 
-      <div className="container-page pb-1 sm:pb-0">
+      <div className="container-page pb-2 sm:pb-0">
         {/* Wordmark selebar container. Dirender sebagai SVG dengan rasio
             natural supaya tidak pernah terpotong di lebar layar mana pun;
             textLength menjaga agar tetap pas meski font gagal dimuat.
@@ -71,7 +71,7 @@ export function SiteFooter() {
         </svg>
 
         <svg
-          viewBox="0 0 721 165"
+          viewBox="0 0 721 172"
           role="presentation"
           aria-hidden
           className="block w-full md:hidden"
@@ -88,7 +88,7 @@ export function SiteFooter() {
           </text>
           <text
             x="0"
-            y="155"
+            y="150"
             textLength="721"
             lengthAdjust="spacingAndGlyphs"
             className="fill-ghost font-extrabold uppercase stretch-display"
