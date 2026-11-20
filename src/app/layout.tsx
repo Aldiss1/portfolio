@@ -74,6 +74,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <TooltipProvider>
             <MotionConfig reducedMotion="user">
               <SmoothScroll>
+                {/* Anchor "kembali ke atas". Sengaja bukan header, karena
+                    header bersifat sticky sehingga offsetTop-nya mengikuti
+                    posisi scroll dan target anchor jadi tidak valid. */}
+                <div id="top" />
                 <SiteHeader />
                 <main className="flex flex-1 flex-col">{children}</main>
                 <SiteFooter />

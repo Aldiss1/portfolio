@@ -18,7 +18,6 @@ import { nav, site } from "@/lib/site";
 export function SiteHeader() {
   return (
     <header
-      id="top"
       className="sticky top-0 z-50 border-b border-border bg-background"
     >
       <div className="container-page flex h-16 items-center justify-between gap-6">
