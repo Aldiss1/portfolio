@@ -1,13 +1,12 @@
-import { ArrowRightIcon, DownloadIcon } from "lucide-react";
+import { ArrowRightIcon, DownloadIcon, MailIcon } from "lucide-react";
 
 import { ButtonLink } from "@/components/button-link";
 import { Reveal } from "@/components/motion/reveal";
 import { ProfilePhoto } from "@/components/profile-photo";
-import { education, site } from "@/lib/site";
+import { site } from "@/lib/site";
 import { projects } from "@/lib/projects";
 
 const stats = [
-  { value: education.gpa, label: `IPK / ${education.gpaScale}`, accent: true },
   { value: String(projects.length), label: "Proyek" },
   { value: "1", label: "Magang" },
   { value: "2024—", label: "Sekarang" },
@@ -57,6 +56,14 @@ export function Hero() {
                 <ButtonLink
                   size="lg"
                   variant="outline"
+                  href={`mailto:${site.email}`}
+                >
+                  <MailIcon data-icon="inline-start" />
+                  Kirim email
+                </ButtonLink>
+                <ButtonLink
+                  size="lg"
+                  variant="outline"
                   external
                   href={site.resume}
                 >
@@ -75,26 +82,16 @@ export function Hero() {
         </div>
 
         <Reveal delay={0.2}>
-          <dl className="mt-14 grid grid-cols-2 border-t border-border sm:grid-cols-4">
-            {stats.map((stat, index) => (
+          <dl className="mt-14 grid grid-cols-3 border-t border-border">
+            {stats.map((stat) => (
               <div
                 key={stat.label}
-                className={
-                  index === 0
-                    ? "border-b border-border py-5 pr-4 sm:border-b-0 sm:border-r sm:pl-0 sm:first:pl-0"
-                    : "border-b border-border py-5 pr-4 sm:border-b-0 sm:border-r sm:pl-4 last:border-r-0 sm:last:pl-4"
-                }
+                className="border-r border-border py-5 pr-3 last:border-r-0 sm:pl-6 sm:last:pl-6 sm:first:pl-0"
               >
-                <dt
-                  className={
-                    stat.accent
-                      ? "text-4xl font-bold tracking-tight text-accent stretch-wide"
-                      : "text-4xl font-bold tracking-tight stretch-wide"
-                  }
-                >
+                <dt className="text-[clamp(1.35rem,6.5vw,2.25rem)] leading-none font-bold tracking-tight whitespace-nowrap stretch-wide">
                   {stat.value}
                 </dt>
-                <dd className="mt-1.5 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted-foreground">
+                <dd className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground sm:text-[0.65rem] sm:tracking-[0.14em]">
                   {stat.label}
                 </dd>
               </div>

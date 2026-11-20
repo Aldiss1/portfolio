@@ -8,7 +8,7 @@ export const site = {
   initials: "AS",
   role: "Mahasiswa Teknik Informatika",
   tagline:
-    "Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun web dari frontend sampai backend.",
+    "Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web dengan Laravel dan Filament, dari database sampai antarmuka.",
   location: "Malang, Indonesia",
   email: "aldisuryasaputra693@gmail.com",
   url: "https://aldisuryasaputra.vercel.app",
@@ -29,18 +29,18 @@ export const education = {
 } as const;
 
 export const bio = [
-  "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang. Ketertarikan saya ada di pengembangan web — mulai dari merancang tampilan, menulis kode frontend, sampai menyambungkannya ke database di sisi backend.",
-  "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: sistem informasi laboratorium, platform pemesanan paket wisata, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
+  "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang dengan fokus pengembangan web di ekosistem Laravel — mulai dari merancang skema database, membangun backend dengan Eloquent, sampai menyusun panel admin memakai Filament.",
+  "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: platform pemesanan paket wisata dan sistem pendaftaran siswa baru yang keduanya dibangun dengan Laravel, sistem informasi laboratorium, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
 ] as const;
 
 export const skills = [
   {
     title: "Web",
-    items: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP"],
+    items: ["PHP", "HTML", "CSS", "JavaScript", "TypeScript"],
   },
   {
     title: "Framework",
-    items: ["React", "Next.js", "Laravel", "Filament", "Tailwind CSS"],
+    items: ["Laravel", "Filament", "React", "Next.js", "Tailwind CSS"],
   },
   {
     title: "Mobile",
