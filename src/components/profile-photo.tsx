@@ -29,7 +29,8 @@ export function ProfilePhoto({ className }: ProfilePhotoProps) {
             fill
             sizes="(max-width: 1024px) 70vw, 420px"
             className="object-cover"
-            priority
+            loading="eager"
+            fetchPriority="high"
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">

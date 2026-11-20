@@ -25,7 +25,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="group flex items-center gap-3"
-          aria-label={`${site.name} — beranda`}
+          aria-label={`${site.initials} ${site.name} — beranda`}
         >
           <span className="grid size-7 place-items-center bg-accent text-[0.7rem] font-semibold text-accent-foreground">
             {site.initials}

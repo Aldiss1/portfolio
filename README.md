@@ -28,13 +28,15 @@ npm run lint    # eslint
 src/
 ├── app/
 │   ├── layout.tsx              # provider, font, metadata, header/footer
-│   ├── page.tsx                # beranda: hero → tentang → karya
+│   ├── page.tsx                # beranda: hero → tentang → karya → kontak
+│   ├── api/contact/route.ts    # kirim form kontak lewat Resend
 │   ├── projects/[slug]/        # halaman detail proyek (prerendered)
 │   ├── sitemap.ts, robots.ts   # file SEO yang digenerate
 │   └── globals.css             # token desain + utility kustom
 ├── components/
 │   ├── ui/                     # primitive shadcn
-│   ├── sections/               # hero, tentang, karya
+│   ├── sections/               # hero, tentang, pengalaman, karya, kontak
+│   ├── contact-form.tsx        # form kontak (client component)
 │   ├── motion/reveal.tsx       # pembungkus animasi saat masuk viewport
 │   └── site-header/footer.tsx
 └── lib/
@@ -54,3 +56,22 @@ src/
 ## Deploy
 
 Langsung jalan di Vercel. Set `site.url` di `src/lib/site.ts` ke domain aslimu supaya metadata, sitemap, dan robots mengarah ke alamat yang benar.
+
+## Form kontak (Resend)
+
+Form di `/#contact` mengirim email lewat [Resend](https://resend.com) melalui route handler `src/app/api/contact/route.ts`.
+
+1. Buat akun Resend, lalu ambil API key di **API Keys**.
+2. Salin `.env.example` menjadi `.env.local` dan isi:
+
+   | Variabel | Keterangan |
+   | --- | --- |
+   | `RESEND_API_KEY` | API key Resend (`re_...`) |
+   | `CONTACT_TO_EMAIL` | Penerima pesan (opsional, default `site.email`) |
+   | `CONTACT_FROM_EMAIL` | Pengirim, mis. `Portfolio <noreply@domainmu.com>` |
+
+3. Tanpa domain terverifikasi, pakai `onboarding@resend.dev` sebagai pengirim — Resend hanya mengizinkannya mengirim ke email pemilik akun. Untuk produksi, verifikasi domain di dashboard Resend lalu ganti `CONTACT_FROM_EMAIL`.
+
+Di Vercel, tambahkan variabel yang sama di **Project → Settings → Environment Variables**.
+
+Form sudah menyertakan validasi panjang input, honeypot anti-bot, escaping HTML, dan `replyTo` ke alamat pengirim sehingga email bisa langsung dibalas.

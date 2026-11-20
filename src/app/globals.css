@@ -65,8 +65,9 @@
   --border: #e4e4e4;
   --input: #e4e4e4;
   --ring: #111111;
-  --ghost: #d8d8d8;
-  --ghost-inverted: #4a4a4a;
+  /* Ghost cukup gelap untuk lolos kontras 3:1 (teks besar) tanpa jadi hitam. */
+  --ghost: #949494;
+  --ghost-inverted: #9a9a9a;
   --radius: 0rem;
   --sidebar: #ffffff;
   --sidebar-foreground: #111111;
@@ -97,8 +98,8 @@
   --border: #262626;
   --input: #262626;
   --ring: #f5f5f5;
-  --ghost: #3a3a3a;
-  --ghost-inverted: #b5b5b5;
+  --ghost: #626262;
+  --ghost-inverted: #a8a8a8;
   --sidebar: #0f0f0f;
   --sidebar-foreground: #f5f5f5;
   --sidebar-primary: #f5f5f5;

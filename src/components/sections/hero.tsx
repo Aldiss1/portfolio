@@ -67,9 +67,11 @@ export function Hero() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.12} className="mx-auto w-full max-w-[360px] lg:mx-0">
+          {/* Foto adalah elemen LCP: sengaja tanpa animasi reveal agar tidak
+              menunda render dan menurunkan skor performance. */}
+          <div className="mx-auto w-full max-w-[360px] lg:mx-0">
             <ProfilePhoto />
-          </Reveal>
+          </div>
         </div>
 
         <Reveal delay={0.2}>
