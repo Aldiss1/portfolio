@@ -35,7 +35,7 @@ export const education: EducationEntry[] = [
     school: "Politeknik Negeri Malang",
     period: "2024 — sekarang",
     gpa: "3,53",
-    gpaScale: "skala 4,00",
+    gpaScale: "skala 4,00 · sem 1–4",
   },
   {
     level: "Rekayasa Perangkat Lunak",
@@ -45,8 +45,8 @@ export const education: EducationEntry[] = [
 ];
 
 export const bio = [
-  "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang dengan fokus pengembangan web di ekosistem Laravel — mulai dari merancang skema database, membangun backend dengan Eloquent, sampai menyusun panel admin memakai Filament.",
-  "Sebagian besar pengalaman saya datang dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim: platform pemesanan paket wisata dan sistem pendaftaran siswa baru yang keduanya dibangun dengan Laravel, sistem informasi laboratorium, sampai aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal baru dan sedang mencari kesempatan magang untuk berkembang di tim nyata.",
+  "Saya mahasiswa Teknik Informatika di Politeknik Negeri Malang dengan fokus pada pengembangan web di ekosistem Laravel — mulai dari merancang skema database dan membangun backend dengan Eloquent, hingga menyusun panel admin untuk kebutuhan operasional.",
+  "Sebagian besar pengalaman saya berasal dari proyek berbasis mata kuliah (PBL) yang dikerjakan dalam tim, antara lain platform pemesanan paket wisata dan sistem pendaftaran siswa baru (keduanya dibangun dengan Laravel), sistem informasi laboratorium, serta aplikasi mobile Flutter dengan model machine learning yang berjalan offline. Saya senang mempelajari hal-hal baru dan sedang mencari kesempatan magang untuk berkembang di tim profesional.",
 ] as const;
 
 export const skills = [
