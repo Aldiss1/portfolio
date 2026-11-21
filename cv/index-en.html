@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Resume — Aldi Surya Saputra</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #1a1d23;
+    --muted: #555b66;
+    --line: #dfe2e8;
+    --brand: #1a1d23;
+  }
+  html, body { background: #fff; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.2pt;
+    line-height: 1.35;
+    -webkit-print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm;
+    padding: 10mm 14mm;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  header { border-bottom: 2.5px solid var(--ink); padding-bottom: 4mm; }
+  h1 { font-size: 20pt; letter-spacing: 0.2px; }
+  .role { font-size: 10.5pt; color: var(--brand); font-weight: 600; margin-top: 0.5mm; }
+  .contact { margin-top: 2mm; font-size: 8.8pt; color: var(--muted); }
+  .contact span { white-space: nowrap; }
+  .contact span + span::before { content: " · "; color: var(--line); }
+
+  /* Sections */
+  section { margin-top: 3.2mm; }
+  h2 {
+    font-size: 10pt; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--ink); padding-bottom: 1mm; border-bottom: 1px solid var(--line);
+    margin-bottom: 2mm;
+  }
+  .summary { color: var(--ink); }
+
+  /* Entries */
+  .entry { margin-bottom: 1.9mm; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .entry-title { font-weight: 700; font-size: 10pt; }
+  .entry-meta { font-size: 8.6pt; color: var(--muted); white-space: nowrap; padding-left: 4mm; }
+  .entry-sub { font-size: 9.2pt; color: var(--muted); }
+  .entry-sub strong { color: var(--ink); font-weight: 600; }
+  ul { margin-top: 1mm; padding-left: 4.5mm; }
+  li { margin-bottom: 0.6mm; }
+  li::marker { color: var(--brand); }
+  .stack { color: var(--muted); font-size: 8.6pt; margin-top: 0.6mm; }
+  .stack b { color: var(--ink); font-weight: 600; }
+
+  /* Skills */
+  .skill-row { display: flex; margin-bottom: 0.9mm; }
+  .skill-label { width: 24mm; flex-shrink: 0; font-weight: 600; }
+  .skill-items { color: var(--muted); }
+
+  /* Education */
+  .edu { display: flex; justify-content: space-between; align-items: baseline; }
+  .edu + .edu { margin-top: 1.6mm; }
+
+  /* Cetak: rapatkan agar CV muat satu halaman A4 */
+  @media print {
+    body { font-size: 8.8pt; line-height: 1.32; }
+    .page { padding: 8mm 13mm; }
+    header { padding-bottom: 3mm; }
+    section { margin-top: 2.2mm; }
+    .entry { margin-bottom: 1.2mm; }
+    li { margin-bottom: 0.2mm; }
+    ul { margin-top: 0.8mm; }
+    h2 { margin-bottom: 1.6mm; }
+    .skill-row { margin-bottom: 0.6mm; }
+  }
+
+  a { color: var(--ink); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Aldi Surya Saputra</h1>
+    <div class="role">Informatics Engineering Student — Laravel &amp; Filament</div>
+    <div class="contact">
+      <span>Malang, Indonesia</span>
+      <span><a href="tel:+6281335558147">+62 813-3555-8147</a></span>
+      <span><a href="mailto:aldisuryasaputra693@gmail.com">aldisuryasaputra693@gmail.com</a></span>
+      <span><a href="https://github.com/Aldiss1">github.com/Aldiss1</a></span>
+      <span><a href="https://www.linkedin.com/in/aldisuryasaputra/">linkedin.com/in/aldisuryasaputra</a></span>
+      <span><a href="https://aldisuryasaputra.vercel.app">aldisuryasaputra.vercel.app</a></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Informatics Engineering student at Politeknik Negeri Malang (State Polytechnic of Malang) who
+      builds web applications with Laravel and Filament — from designing database schemas and building
+      backends with Eloquent, to composing admin panels. Experienced working in teams through
+      course-based projects: a tour package booking platform, a laboratory information system, and a
+      mobile app with an on-device machine learning model. Currently seeking an industry internship to
+      grow within a professional team.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Head of Internal Department</span>
+        <span class="entry-meta">February 2026 – present</span>
+      </div>
+      <div class="entry-sub"><strong>HMTI — Information Technology Student Association</strong>, Politeknik Negeri Malang</div>
+      <ul>
+        <li>Led the internal department of HMTI Polinema: coordinated the agenda, distributed tasks, and maintained communication across members.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Software Engineer Intern</span>
+        <span class="entry-meta">July – December 2023</span>
+      </div>
+      <div class="entry-sub"><strong>Software House JV Partner</strong> — Vocational high school internship</div>
+      <ul>
+        <li>Built the frontend of the Tukan Indonesia website with Laravel, from scratch through release, during the internship period.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">SmartReceipt Analyzer — Offline Receipt App</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 categories, 6,026 samples) that runs entirely offline inside a Flutter app.</li>
+        <li>Wrote a receipt parser that separates items, quantities, and prices from messy OCR text, plus a spending analytics dashboard.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Trip Web — Tour Package Booking Platform</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Built the backend and admin panel with Laravel + Filament: destinations, departure schedules, promos, bookings, testimonials, and Excel report exports.</li>
+        <li>Created a scheduled command that automatically cancels expired bookings and releases their quota back to the schedule.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> Laravel, PHP, Filament, MySQL, Tailwind CSS</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Software Engineering Lab Information System</span>
+        <span class="entry-meta">2025</span>
+      </div>
+      <ul>
+        <li>Built the admin panel (members, research, publications, blog, roadmap) along with its database layer.</li>
+        <li>Wrote PostgreSQL stored procedures and materialized views so heavy reports do not slow down daily queries.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> PHP, PostgreSQL, Bootstrap, JavaScript — <a href="https://labse.web.id">labse.web.id</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">New Student Admission System, SMKN 2 Singosari</span>
+        <span class="entry-meta">2023</span>
+      </div>
+      <ul>
+        <li>Built a full-stack new student admission application as a vocational high school final project, from the interface down to the server logic.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> Laravel, MySQL</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skill-row"><span class="skill-label">Web</span><span class="skill-items">PHP, HTML, CSS, JavaScript, TypeScript</span></div>
+    <div class="skill-row"><span class="skill-label">Frameworks</span><span class="skill-items">Laravel, Filament, React, Next.js, Tailwind CSS</span></div>
+    <div class="skill-row"><span class="skill-label">Mobile</span><span class="skill-items">Flutter, Dart</span></div>
+    <div class="skill-row"><span class="skill-label">Database</span><span class="skill-items">MySQL, PostgreSQL, SQLite</span></div>
+    <div class="skill-row"><span class="skill-label">Tools</span><span class="skill-items">Git, GitHub, Figma, VS Code, Postman</span></div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu">
+      <div>
+        <span class="entry-title">D4 Informatics Engineering</span>
+        <div class="entry-sub"><strong>Politeknik Negeri Malang</strong> (State Polytechnic of Malang)</div>
+        <div class="entry-meta" style="padding-left: 0;">GPA: 3.53 (out of 4.00) — cumulative, semesters 1–4</div>
+      </div>
+      <span class="entry-meta">2024 – present</span>
+    </div>
+    <div class="edu" style="margin-top: 1.9mm;">
+      <div>
+        <span class="entry-title">Software Engineering</span>
+        <div class="entry-sub"><strong>SMKN 2 Singosari</strong> (Vocational High School)</div>
+      </div>
+      <span class="entry-meta">Graduated 2024</span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
