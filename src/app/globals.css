@@ -10,6 +10,7 @@
   --font-sans: var(--font-archivo);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-archivo);
+  --font-serif: var(--font-instrument-serif);
   --color-ghost: var(--ghost);
   --color-ghost-inverted: var(--ghost-inverted);
   --color-sidebar-ring: var(--sidebar-ring);

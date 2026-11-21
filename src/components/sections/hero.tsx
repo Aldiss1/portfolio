@@ -7,9 +7,9 @@ import { site } from "@/lib/site";
 import { projects } from "@/lib/projects";
 
 const stats = [
-  { value: String(projects.length), label: "Proyek" },
-  { value: "1", label: "Magang" },
-  { value: "2024—", label: "Sekarang" },
+  { label: "Proyek", value: String(projects.length) },
+  { label: "Fokus", value: "Laravel" },
+  { label: "Pendidikan", value: "D-IV Informatika" },
 ];
 
 export function Hero() {
@@ -80,17 +80,17 @@ export function Hero() {
         </div>
 
         <Reveal delay={0.2}>
-          <dl className="mt-14 grid grid-cols-3 border-t border-border">
+          <dl className="mt-14 grid grid-cols-1 border-t border-border sm:grid-cols-3">
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="border-r border-border py-5 pr-3 last:border-r-0 sm:pl-6 sm:last:pl-6 sm:first:pl-0"
+                className="flex items-baseline justify-between gap-4 border-b border-border py-4 sm:block sm:border-r sm:border-b-0 sm:py-5 sm:pr-3 sm:pl-6 sm:last:border-r-0 sm:last:pl-6 sm:first:pl-0"
               >
-                <dt className="text-[clamp(1.35rem,6.5vw,2.25rem)] leading-none font-bold tracking-tight whitespace-nowrap stretch-wide">
-                  {stat.value}
-                </dt>
-                <dd className="mt-1.5 font-mono text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground sm:text-[0.65rem] sm:tracking-[0.14em]">
+                <dt className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-muted-foreground sm:text-[0.65rem]">
                   {stat.label}
+                </dt>
+                <dd className="font-serif text-[clamp(1.5rem,3vw,2.5rem)] leading-none tracking-[-0.01em] whitespace-nowrap">
+                  {stat.value}
                 </dd>
               </div>
             ))}
