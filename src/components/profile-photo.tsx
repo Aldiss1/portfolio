@@ -21,7 +21,13 @@ type ProfilePhotoProps = {
 export function ProfilePhoto({ className }: ProfilePhotoProps) {
   return (
     <figure className={cn("relative", className)}>
-      <div className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-muted/30">
+      <div
+        className={cn(
+          "relative aspect-[4/5] w-full overflow-hidden bg-muted/30",
+          // Garis hairline hanya untuk slot kosong; foto asli tampil tanpa bingkai.
+          !site.photo && "border border-border",
+        )}
+      >
         {site.photo ? (
           <Image
             src={site.photo}
