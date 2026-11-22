@@ -64,9 +64,9 @@ CONTENT = {
                 ],
             },
             {
-                "title": "Software Engineer Intern",
+                "title": "Web Developer Intern (PKL)",
                 "period": "Juli – Desember 2023",
-                "org": ("Software House JV Partner", " — Magang PKL SMK"),
+                "org": ("Software House JV Partner", " — Praktik Kerja Lapangan SMK"),
                 "bullets": [
                     "Membangun frontend website Tukan Indonesia dengan Laravel, dari awal hingga "
                     "rilis selama masa magang.",
@@ -74,17 +74,6 @@ CONTENT = {
             },
         ],
         "projects": [
-            {
-                "title": "SmartReceipt Analyzer — Aplikasi Struk Offline",
-                "period": "2026",
-                "bullets": [
-                    "Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, "
-                    "6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.",
-                    "Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR "
-                    "tidak rapi, plus dashboard analitik pengeluaran.",
-                ],
-                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
-            },
             {
                 "title": "Trip Web — Platform Pemesanan Paket Wisata",
                 "period": "2026",
@@ -95,6 +84,17 @@ CONTENT = {
                     "melepas kembali kuotanya.",
                 ],
                 "stack": "Laravel, PHP, Filament, MySQL, Tailwind CSS",
+            },
+            {
+                "title": "SmartReceipt Analyzer — Aplikasi Struk Offline",
+                "period": "2026",
+                "bullets": [
+                    "Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, "
+                    "6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.",
+                    "Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR "
+                    "tidak rapi, plus dashboard analitik pengeluaran.",
+                ],
+                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
             },
             {
                 "title": "Sistem Informasi Lab Software Engineering",
@@ -117,6 +117,16 @@ CONTENT = {
                 ],
                 "stack": "Laravel, MySQL",
             },
+            {
+                "title": "Portfolio Pribadi — Situs & CV Daring",
+                "period": "2026",
+                "bullets": [
+                    "Membangun situs portfolio sendiri dengan Next.js dan TypeScript: App Router, "
+                    "komponen server, animasi, dan CV yang bisa diunduh.",
+                ],
+                "stack": "Next.js, React, TypeScript, Tailwind CSS",
+                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
+            },
         ],
         "skills": [
             ("Web", "PHP, HTML, CSS, JavaScript, TypeScript"),
@@ -128,7 +138,7 @@ CONTENT = {
         "education": [
             {
                 "title": "D4 Teknik Informatika",
-                "period": "2024 – sekarang",
+                "period": "2024 – 2028 (estimasi)",
                 "school": "Politeknik Negeri Malang",
                 "note": "IPK: 3,53 (skala 4,00) — kumulatif semester 1–4",
             },
@@ -184,7 +194,7 @@ CONTENT = {
                 ],
             },
             {
-                "title": "Software Engineer Intern",
+                "title": "Web Developer Intern (Vocational Internship)",
                 "period": "July – December 2023",
                 "org": ("Software House JV Partner", " — Vocational high school internship"),
                 "bullets": [
@@ -195,17 +205,6 @@ CONTENT = {
         ],
         "projects": [
             {
-                "title": "SmartReceipt Analyzer — Offline Receipt App",
-                "period": "2026",
-                "bullets": [
-                    "Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 "
-                    "categories, 6,026 samples) that runs entirely offline inside a Flutter app.",
-                    "Wrote a receipt parser that separates items, quantities, and prices from messy "
-                    "OCR text, plus a spending analytics dashboard.",
-                ],
-                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
-            },
-            {
                 "title": "Trip Web — Tour Package Booking Platform",
                 "period": "2026",
                 "bullets": [
@@ -215,6 +214,17 @@ CONTENT = {
                     "releases their quota back to the schedule.",
                 ],
                 "stack": "Laravel, PHP, Filament, MySQL, Tailwind CSS",
+            },
+            {
+                "title": "SmartReceipt Analyzer — Offline Receipt App",
+                "period": "2026",
+                "bullets": [
+                    "Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 "
+                    "categories, 6,026 samples) that runs entirely offline inside a Flutter app.",
+                    "Wrote a receipt parser that separates items, quantities, and prices from messy "
+                    "OCR text, plus a spending analytics dashboard.",
+                ],
+                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
             },
             {
                 "title": "Software Engineering Lab Information System",
@@ -237,6 +247,16 @@ CONTENT = {
                 ],
                 "stack": "Laravel, MySQL",
             },
+            {
+                "title": "Personal Portfolio — Website & Online CV",
+                "period": "2026",
+                "bullets": [
+                    "Built my own portfolio site with Next.js and TypeScript: App Router, server "
+                    "components, animations, and a downloadable CV.",
+                ],
+                "stack": "Next.js, React, TypeScript, Tailwind CSS",
+                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
+            },
         ],
         "skills": [
             ("Web", "PHP, HTML, CSS, JavaScript, TypeScript"),
@@ -248,7 +268,7 @@ CONTENT = {
         "education": [
             {
                 "title": "D4 Informatics Engineering",
-                "period": "2024 – present",
+                "period": "2024 – 2028 (expected)",
                 "school": "Politeknik Negeri Malang (State Polytechnic of Malang)",
                 "note": "GPA: 3.53 (out of 4.00) — cumulative, semesters 1–4",
             },
@@ -422,6 +442,21 @@ def build(lang: str, out_path: Path) -> None:
     p = para(doc, after=0, line=1.15)
     run(p, c["summary"], size=9.2)
 
+    # pendidikan — ditaruh tepat di bawah ringkasan karena pelamar magang
+    section(doc, labels["education"])
+    for i, edu in enumerate(c["education"]):
+        p = para(doc, before=4 if i else 2, after=0.5, keep=True)
+        p.paragraph_format.tab_stops.add_tab_stop(CONTENT_WIDTH, WD_TAB_ALIGNMENT.RIGHT)
+        run(p, edu["title"], size=10, bold=True)
+        run(p, "\t" + edu["period"], size=8.6, color=MUTED)
+
+        p = para(doc, after=0.5)
+        run(p, edu["school"], size=9.2, bold=True)
+
+        if edu["note"]:
+            p = para(doc, after=0)
+            run(p, edu["note"], size=8.6, color=MUTED)
+
     # pengalaman
     section(doc, labels["experience"])
     for job in c["experience"]:
@@ -448,21 +483,6 @@ def build(lang: str, out_path: Path) -> None:
         pf.tab_stops.add_tab_stop(Cm(2.9))
         run(p, label + "\t", size=9.2, bold=True)
         run(p, items, size=9.2, color=MUTED)
-
-    # pendidikan
-    section(doc, labels["education"])
-    for i, edu in enumerate(c["education"]):
-        p = para(doc, before=4 if i else 2, after=0.5, keep=True)
-        p.paragraph_format.tab_stops.add_tab_stop(CONTENT_WIDTH, WD_TAB_ALIGNMENT.RIGHT)
-        run(p, edu["title"], size=10, bold=True)
-        run(p, "\t" + edu["period"], size=8.6, color=MUTED)
-
-        p = para(doc, after=0.5)
-        run(p, edu["school"], size=9.2, bold=True)
-
-        if edu["note"]:
-            p = para(doc, after=0)
-            run(p, edu["note"], size=8.6, color=MUTED)
 
     doc.save(out_path)
     print(f"tersimpan: {out_path}")
