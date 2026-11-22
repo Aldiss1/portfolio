@@ -24,9 +24,6 @@ export type EducationEntry = {
   level: string;
   school: string;
   period: string;
-  /** IPK hanya relevan untuk jenjang yang masih berjalan. */
-  gpa?: string;
-  gpaScale?: string;
 };
 
 export const education: EducationEntry[] = [
@@ -34,8 +31,6 @@ export const education: EducationEntry[] = [
     level: "D4 Teknik Informatika",
     school: "Politeknik Negeri Malang",
     period: "2024 — sekarang",
-    gpa: "3,53",
-    gpaScale: "skala 4,00 · sem 1–4",
   },
   {
     level: "Rekayasa Perangkat Lunak",
