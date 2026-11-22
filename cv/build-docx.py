@@ -5,8 +5,9 @@ Jalankan: python3 cv/build-docx.py
 Butuh:   pip install python-docx
 
 Sumber teks ada di CONTENT di bawah. Versi HTML-nya ada di cv/index.html
-(Indonesia) dan cv/index-en.html (Inggris). Bila salah satu diubah, samakan
-di sini juga supaya versi Word dan PDF tidak berbeda isi.
+(Indonesia, versi utama) dan cv/backup-en/index-en.html (Inggris, cadangan).
+Bila salah satu diubah, samakan di sini juga supaya versi Word dan PDF tidak
+berbeda isi.
 """
 
 from pathlib import Path
@@ -140,6 +141,8 @@ CONTENT = {
         ],
     },
     "en": {
+        # versi Inggris disimpan sebagai cadangan di subfolder tersendiri
+        "out_dir": "backup-en",
         "filename": "CV_Aldi_Surya_Saputra_EN.docx",
         "labels": {
             "summary": "Summary",
@@ -468,4 +471,6 @@ def build(lang: str, out_path: Path) -> None:
 if __name__ == "__main__":
     here = Path(__file__).parent
     for lang in ("id", "en"):
-        build(lang, here / CONTENT[lang]["filename"])
+        out_dir = here / CONTENT[lang].get("out_dir", "")
+        out_dir.mkdir(parents=True, exist_ok=True)
+        build(lang, out_dir / CONTENT[lang]["filename"])
