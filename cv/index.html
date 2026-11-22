@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8" />
-<title>CV — Aldi Surya Saputra</title>
+<title>CV Aldi Surya Saputra — Magang Full Stack</title>
 <style>
   @page { size: A4; margin: 0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,15 +68,19 @@
 
   /* Cetak: rapatkan agar CV muat satu halaman A4 */
   @media print {
-    body { font-size: 8.8pt; line-height: 1.32; }
-    .page { padding: 8mm 13mm; }
-    header { padding-bottom: 3mm; }
-    section { margin-top: 2.2mm; }
-    .entry { margin-bottom: 1.2mm; }
-    li { margin-bottom: 0.2mm; }
-    ul { margin-top: 0.8mm; }
-    h2 { margin-bottom: 1.6mm; }
-    .skill-row { margin-bottom: 0.6mm; }
+    body { font-size: 8.5pt; line-height: 1.28; }
+    .page { padding: 7mm 13mm; }
+    header { padding-bottom: 2.5mm; }
+    h1 { font-size: 19pt; }
+    .role { font-size: 10pt; }
+    .contact { margin-top: 1.5mm; }
+    section { margin-top: 1.9mm; }
+    .entry { margin-bottom: 1mm; }
+    li { margin-bottom: 0.1mm; }
+    ul { margin-top: 0.6mm; }
+    h2 { margin-bottom: 1.3mm; font-size: 9.5pt; }
+    .entry-title { font-size: 9.6pt; }
+    .skill-row { margin-bottom: 0.4mm; }
   }
 
   a { color: var(--ink); text-decoration: none; }
@@ -87,7 +91,7 @@
 
   <header>
     <h1>Aldi Surya Saputra</h1>
-    <div class="role">Mahasiswa Teknik Informatika — Laravel &amp; Filament</div>
+    <div class="role">Mahasiswa Teknik Informatika — Full Stack Web Developer (Laravel, Next.js)</div>
     <div class="contact">
       <span>Malang, Indonesia</span>
       <span><a href="tel:+6281335558147">0813-3555-8147</a></span>
@@ -101,12 +105,12 @@
   <section>
     <h2>Ringkasan</h2>
     <p class="summary">
-      Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web dengan
-      Laravel dan Filament — mulai dari merancang skema database, membangun backend dengan Eloquent,
-      sampai menyusun panel admin. Terbiasa bekerja dalam tim melalui proyek berbasis mata kuliah:
-      platform pemesanan paket wisata, sistem informasi laboratorium, hingga aplikasi mobile dengan
-      machine learning yang berjalan offline. Saat ini mencari kesempatan magang industri untuk
-      berkembang di tim profesional.
+      Mahasiswa D4 Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web full
+      stack: backend dan panel admin dengan Laravel + Filament, database MySQL/PostgreSQL, serta
+      frontend dengan Next.js dan TypeScript. Telah mengerjakan platform pemesanan paket wisata,
+      sistem informasi laboratorium, situs portofolio pribadi, dan aplikasi mobile Flutter dengan
+      machine learning yang berjalan offline. Mencari magang full stack untuk berkontribusi pada
+      produk nyata di tim profesional.
     </p>
   </section>
 
@@ -116,7 +120,7 @@
       <div>
         <span class="entry-title">D4 Teknik Informatika</span>
         <div class="entry-sub"><strong>Politeknik Negeri Malang</strong></div>
-        <div class="entry-meta" style="padding-left: 0;">IPK: 3,53 (skala 4,00) — kumulatif semester 1–4</div>
+        <div class="entry-meta" style="padding-left: 0;">IPK 3,53 (skala 4,00), kumulatif semester 1–4</div>
       </div>
       <span class="entry-meta">2024 – 2028 (estimasi)</span>
     </div>
@@ -136,9 +140,10 @@
         <span class="entry-title">Ketua Departemen Internal</span>
         <span class="entry-meta">Februari 2026 – sekarang</span>
       </div>
-      <div class="entry-sub"><strong>HMTI — Himpunan Mahasiswa Teknologi Informasi</strong>, Politeknik Negeri Malang</div>
+      <div class="entry-sub"><strong>HMTI Polinema</strong> — Himpunan Mahasiswa Teknologi Informasi, Politeknik Negeri Malang</div>
       <ul>
-        <li>Memimpin departemen internal HMTI Polinema: mengoordinasikan agenda, membagi tugas, dan menjaga komunikasi antar anggota.</li>
+        <li>Memimpin departemen internal Himpunan Mahasiswa Teknologi Informasi Politeknik Negeri Malang.</li>
+        <li>Mengoordinasikan agenda, membagi tugas, dan menjaga komunikasi antar anggota.</li>
       </ul>
     </div>
     <div class="entry">
@@ -161,21 +166,10 @@
         <span class="entry-meta">2026</span>
       </div>
       <ul>
-        <li>Mengerjakan backend &amp; panel admin Laravel + Filament: destinasi, jadwal, promo, booking, testimoni, dan ekspor laporan Excel.</li>
+        <li>Mengerjakan backend dan panel admin Laravel + Filament: destinasi, jadwal, promo, booking, testimoni, dan ekspor laporan Excel.</li>
         <li>Membuat command terjadwal yang otomatis membatalkan booking kedaluwarsa dan melepas kembali kuotanya.</li>
       </ul>
       <div class="stack"><b>Teknologi:</b> Laravel, PHP, Filament, MySQL, Tailwind CSS</div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">SmartReceipt Analyzer — Aplikasi Struk Offline</span>
-        <span class="entry-meta">2026</span>
-      </div>
-      <ul>
-        <li>Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, 6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.</li>
-        <li>Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR tidak rapi, plus dashboard analitik pengeluaran.</li>
-      </ul>
-      <div class="stack"><b>Teknologi:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
     </div>
     <div class="entry">
       <div class="entry-head">
@@ -190,23 +184,34 @@
     </div>
     <div class="entry">
       <div class="entry-head">
+        <span class="entry-title">Portofolio Pribadi — Situs dan CV Daring</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Membangun dan men-deploy sendiri situs portofolio dengan Next.js dan TypeScript: App Router, komponen server, animasi, dan CV yang bisa diunduh.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> Next.js, React, TypeScript, Tailwind CSS — <a href="https://aldisuryasaputra.vercel.app">aldisuryasaputra.vercel.app</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">SmartReceipt Analyzer — Aplikasi Struk Offline</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, 6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.</li>
+        <li>Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR tidak rapi, plus dashboard analitik pengeluaran.</li>
+      </ul>
+      <div class="stack"><b>Teknologi:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
         <span class="entry-title">Sistem Pendaftaran Siswa Baru SMKN 2 Singosari</span>
         <span class="entry-meta">2023</span>
       </div>
       <ul>
-        <li>Membangun aplikasi pendaftaran siswa baru secara full stack (tugas akhir SMK), dari tampilan hingga logika server.</li>
+        <li>Membangun aplikasi pendaftaran siswa baru secara full stack (tugas akhir SMK), dari antarmuka hingga logika server dan basis data.</li>
       </ul>
       <div class="stack"><b>Teknologi:</b> Laravel, MySQL</div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Portfolio Pribadi — Situs &amp; CV Daring</span>
-        <span class="entry-meta">2026</span>
-      </div>
-      <ul>
-        <li>Membangun situs portfolio sendiri dengan Next.js dan TypeScript: App Router, komponen server, animasi, dan CV yang bisa diunduh.</li>
-      </ul>
-      <div class="stack"><b>Teknologi:</b> Next.js, React, TypeScript, Tailwind CSS — <a href="https://aldisuryasaputra.vercel.app">aldisuryasaputra.vercel.app</a></div>
     </div>
   </section>
 

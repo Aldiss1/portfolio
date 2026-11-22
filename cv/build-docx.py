@@ -36,7 +36,7 @@ CONTENT = {
             "stack": "Teknologi",
         },
         "name": "Aldi Surya Saputra",
-        "role": "Mahasiswa Teknik Informatika — Laravel & Filament",
+        "role": "Mahasiswa Teknik Informatika — Full Stack Web Developer (Laravel, Next.js)",
         "contact": [
             ("Malang, Indonesia", None),
             ("0813-3555-8147", "tel:+6281335558147"),
@@ -46,21 +46,25 @@ CONTENT = {
             ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
         ],
         "summary": (
-            "Mahasiswa Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web "
-            "dengan Laravel dan Filament — mulai dari merancang skema database, membangun backend "
-            "dengan Eloquent, sampai menyusun panel admin. Terbiasa bekerja dalam tim melalui proyek "
-            "berbasis mata kuliah: platform pemesanan paket wisata, sistem informasi laboratorium, "
-            "hingga aplikasi mobile dengan machine learning yang berjalan offline. Saat ini mencari "
-            "kesempatan magang industri untuk berkembang di tim profesional."
+            "Mahasiswa D4 Teknik Informatika Politeknik Negeri Malang yang membangun aplikasi web "
+            "full stack: backend dan panel admin dengan Laravel + Filament, database "
+            "MySQL/PostgreSQL, serta frontend dengan Next.js dan TypeScript. Telah mengerjakan "
+            "platform pemesanan paket wisata, sistem informasi laboratorium, situs portofolio "
+            "pribadi, dan aplikasi mobile Flutter dengan machine learning yang berjalan offline. "
+            "Mencari magang full stack untuk berkontribusi pada produk nyata di tim profesional."
         ),
         "experience": [
             {
                 "title": "Ketua Departemen Internal",
                 "period": "Februari 2026 – sekarang",
-                "org": ("HMTI — Himpunan Mahasiswa Teknologi Informasi", ", Politeknik Negeri Malang"),
+                "org": (
+                    "HMTI Polinema",
+                    " — Himpunan Mahasiswa Teknologi Informasi, Politeknik Negeri Malang",
+                ),
                 "bullets": [
-                    "Memimpin departemen internal HMTI Polinema: mengoordinasikan agenda, membagi "
-                    "tugas, dan menjaga komunikasi antar anggota.",
+                    "Memimpin departemen internal Himpunan Mahasiswa Teknologi Informasi "
+                    "Politeknik Negeri Malang.",
+                    "Mengoordinasikan agenda, membagi tugas, dan menjaga komunikasi antar anggota.",
                 ],
             },
             {
@@ -78,23 +82,12 @@ CONTENT = {
                 "title": "Trip Web — Platform Pemesanan Paket Wisata",
                 "period": "2026",
                 "bullets": [
-                    "Mengerjakan backend & panel admin Laravel + Filament: destinasi, jadwal, promo, "
+                    "Mengerjakan backend dan panel admin Laravel + Filament: destinasi, jadwal, promo, "
                     "booking, testimoni, dan ekspor laporan Excel.",
                     "Membuat command terjadwal yang otomatis membatalkan booking kedaluwarsa dan "
                     "melepas kembali kuotanya.",
                 ],
                 "stack": "Laravel, PHP, Filament, MySQL, Tailwind CSS",
-            },
-            {
-                "title": "SmartReceipt Analyzer — Aplikasi Struk Offline",
-                "period": "2026",
-                "bullets": [
-                    "Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, "
-                    "6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.",
-                    "Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR "
-                    "tidak rapi, plus dashboard analitik pengeluaran.",
-                ],
-                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
             },
             {
                 "title": "Sistem Informasi Lab Software Engineering",
@@ -109,23 +102,34 @@ CONTENT = {
                 "stack_link": ("labse.web.id", "https://labse.web.id"),
             },
             {
+                "title": "Portofolio Pribadi — Situs dan CV Daring",
+                "period": "2026",
+                "bullets": [
+                    "Membangun dan men-deploy sendiri situs portofolio dengan Next.js dan "
+                    "TypeScript: App Router, komponen server, animasi, dan CV yang bisa diunduh.",
+                ],
+                "stack": "Next.js, React, TypeScript, Tailwind CSS",
+                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
+            },
+            {
+                "title": "SmartReceipt Analyzer — Aplikasi Struk Offline",
+                "period": "2026",
+                "bullets": [
+                    "Membangun pipeline OCR → normalisasi teks → TF-IDF → Naive Bayes (15 kategori, "
+                    "6.026 sampel) yang seluruhnya berjalan offline di aplikasi Flutter.",
+                    "Menyusun parser struk yang memisahkan item, kuantitas, dan harga dari teks OCR "
+                    "tidak rapi, plus dashboard analitik pengeluaran.",
+                ],
+                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
+            },
+            {
                 "title": "Sistem Pendaftaran Siswa Baru SMKN 2 Singosari",
                 "period": "2023",
                 "bullets": [
                     "Membangun aplikasi pendaftaran siswa baru secara full stack (tugas akhir SMK), "
-                    "dari tampilan hingga logika server.",
+                    "dari antarmuka hingga logika server dan basis data.",
                 ],
                 "stack": "Laravel, MySQL",
-            },
-            {
-                "title": "Portfolio Pribadi — Situs & CV Daring",
-                "period": "2026",
-                "bullets": [
-                    "Membangun situs portfolio sendiri dengan Next.js dan TypeScript: App Router, "
-                    "komponen server, animasi, dan CV yang bisa diunduh.",
-                ],
-                "stack": "Next.js, React, TypeScript, Tailwind CSS",
-                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
             },
         ],
         "skills": [
@@ -140,7 +144,7 @@ CONTENT = {
                 "title": "D4 Teknik Informatika",
                 "period": "2024 – 2028 (estimasi)",
                 "school": "Politeknik Negeri Malang",
-                "note": "IPK: 3,53 (skala 4,00) — kumulatif semester 1–4",
+                "note": "IPK 3,53 (skala 4,00), kumulatif semester 1–4",
             },
             {
                 "title": "Rekayasa Perangkat Lunak",
@@ -163,7 +167,7 @@ CONTENT = {
             "stack": "Tech stack",
         },
         "name": "Aldi Surya Saputra",
-        "role": "Informatics Engineering Student — Laravel & Filament",
+        "role": "Informatics Engineering Student — Full Stack Web Developer (Laravel, Next.js)",
         "contact": [
             ("Malang, Indonesia", None),
             ("+62 813-3555-8147", "tel:+6281335558147"),
@@ -173,24 +177,27 @@ CONTENT = {
             ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
         ],
         "summary": (
-            "Informatics Engineering student at Politeknik Negeri Malang (State Polytechnic of "
-            "Malang) who builds web applications with Laravel and Filament — from designing database "
-            "schemas and building backends with Eloquent, to composing admin panels. Experienced "
-            "working in teams through course-based projects: a tour package booking platform, a "
-            "laboratory information system, and a mobile app with an on-device machine learning "
-            "model. Currently seeking an industry internship to grow within a professional team."
+            "D4 Informatics Engineering student at Politeknik Negeri Malang (State Polytechnic of "
+            "Malang) who builds full-stack web applications: backends and admin panels with Laravel "
+            "+ Filament, MySQL/PostgreSQL databases, and frontends with Next.js and TypeScript. Has "
+            "worked on a tour package booking platform, a laboratory information system, a personal "
+            "portfolio site, and a Flutter mobile app with an on-device machine learning model. "
+            "Seeking a full-stack internship to contribute to real products within a professional "
+            "team."
         ),
         "experience": [
             {
                 "title": "Head of Internal Department",
                 "period": "February 2026 – present",
                 "org": (
-                    "HMTI — Information Technology Student Association",
-                    ", Politeknik Negeri Malang",
+                    "HMTI Polinema",
+                    " — Information Technology Student Association, Politeknik Negeri Malang",
                 ),
                 "bullets": [
-                    "Led the internal department of HMTI Polinema: coordinated the agenda, "
-                    "distributed tasks, and maintained communication across members.",
+                    "Led the internal department of the Information Technology Student Association "
+                    "at Politeknik Negeri Malang.",
+                    "Coordinated the agenda, distributed tasks, and maintained communication across "
+                    "members.",
                 ],
             },
             {
@@ -216,17 +223,6 @@ CONTENT = {
                 "stack": "Laravel, PHP, Filament, MySQL, Tailwind CSS",
             },
             {
-                "title": "SmartReceipt Analyzer — Offline Receipt App",
-                "period": "2026",
-                "bullets": [
-                    "Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 "
-                    "categories, 6,026 samples) that runs entirely offline inside a Flutter app.",
-                    "Wrote a receipt parser that separates items, quantities, and prices from messy "
-                    "OCR text, plus a spending analytics dashboard.",
-                ],
-                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
-            },
-            {
                 "title": "Software Engineering Lab Information System",
                 "period": "2025",
                 "bullets": [
@@ -239,23 +235,34 @@ CONTENT = {
                 "stack_link": ("labse.web.id", "https://labse.web.id"),
             },
             {
+                "title": "Personal Portfolio — Website & Online CV",
+                "period": "2026",
+                "bullets": [
+                    "Built and deployed my own portfolio site with Next.js and TypeScript: App "
+                    "Router, server components, animations, and a downloadable CV.",
+                ],
+                "stack": "Next.js, React, TypeScript, Tailwind CSS",
+                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
+            },
+            {
+                "title": "SmartReceipt Analyzer — Offline Receipt App",
+                "period": "2026",
+                "bullets": [
+                    "Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 "
+                    "categories, 6,026 samples) that runs entirely offline inside a Flutter app.",
+                    "Wrote a receipt parser that separates items, quantities, and prices from messy "
+                    "OCR text, plus a spending analytics dashboard.",
+                ],
+                "stack": "Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite",
+            },
+            {
                 "title": "New Student Admission System, SMKN 2 Singosari",
                 "period": "2023",
                 "bullets": [
                     "Built a full-stack new student admission application as a vocational high "
-                    "school final project, from the interface down to the server logic.",
+                    "school final project, from the interface through server logic and database.",
                 ],
                 "stack": "Laravel, MySQL",
-            },
-            {
-                "title": "Personal Portfolio — Website & Online CV",
-                "period": "2026",
-                "bullets": [
-                    "Built my own portfolio site with Next.js and TypeScript: App Router, server "
-                    "components, animations, and a downloadable CV.",
-                ],
-                "stack": "Next.js, React, TypeScript, Tailwind CSS",
-                "stack_link": ("aldisuryasaputra.vercel.app", "https://aldisuryasaputra.vercel.app"),
             },
         ],
         "skills": [
@@ -270,7 +277,7 @@ CONTENT = {
                 "title": "D4 Informatics Engineering",
                 "period": "2024 – 2028 (expected)",
                 "school": "Politeknik Negeri Malang (State Polytechnic of Malang)",
-                "note": "GPA: 3.53 (out of 4.00) — cumulative, semesters 1–4",
+                "note": "GPA 3.53 (out of 4.00), cumulative semesters 1–4",
             },
             {
                 "title": "Software Engineering",

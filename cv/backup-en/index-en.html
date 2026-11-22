@@ -68,15 +68,19 @@
 
   /* Cetak: rapatkan agar CV muat satu halaman A4 */
   @media print {
-    body { font-size: 8.8pt; line-height: 1.32; }
-    .page { padding: 8mm 13mm; }
-    header { padding-bottom: 3mm; }
-    section { margin-top: 2.2mm; }
-    .entry { margin-bottom: 1.2mm; }
-    li { margin-bottom: 0.2mm; }
-    ul { margin-top: 0.8mm; }
-    h2 { margin-bottom: 1.6mm; }
-    .skill-row { margin-bottom: 0.6mm; }
+    body { font-size: 8.5pt; line-height: 1.28; }
+    .page { padding: 7mm 13mm; }
+    header { padding-bottom: 2.5mm; }
+    h1 { font-size: 19pt; }
+    .role { font-size: 10pt; }
+    .contact { margin-top: 1.5mm; }
+    section { margin-top: 1.9mm; }
+    .entry { margin-bottom: 1mm; }
+    li { margin-bottom: 0.1mm; }
+    ul { margin-top: 0.6mm; }
+    h2 { margin-bottom: 1.3mm; font-size: 9.5pt; }
+    .entry-title { font-size: 9.6pt; }
+    .skill-row { margin-bottom: 0.4mm; }
   }
 
   a { color: var(--ink); text-decoration: none; }
@@ -87,7 +91,7 @@
 
   <header>
     <h1>Aldi Surya Saputra</h1>
-    <div class="role">Informatics Engineering Student — Laravel &amp; Filament</div>
+    <div class="role">Informatics Engineering Student — Full Stack Web Developer (Laravel, Next.js)</div>
     <div class="contact">
       <span>Malang, Indonesia</span>
       <span><a href="tel:+6281335558147">+62 813-3555-8147</a></span>
@@ -101,12 +105,12 @@
   <section>
     <h2>Summary</h2>
     <p class="summary">
-      Informatics Engineering student at Politeknik Negeri Malang (State Polytechnic of Malang) who
-      builds web applications with Laravel and Filament — from designing database schemas and building
-      backends with Eloquent, to composing admin panels. Experienced working in teams through
-      course-based projects: a tour package booking platform, a laboratory information system, and a
-      mobile app with an on-device machine learning model. Currently seeking an industry internship to
-      grow within a professional team.
+      D4 Informatics Engineering student at Politeknik Negeri Malang (State Polytechnic of Malang)
+      who builds full-stack web applications: backends and admin panels with Laravel + Filament,
+      MySQL/PostgreSQL databases, and frontends with Next.js and TypeScript. Has worked on a tour
+      package booking platform, a laboratory information system, a personal portfolio site, and a
+      Flutter mobile app with an on-device machine learning model. Seeking a full-stack internship to
+      contribute to real products within a professional team.
     </p>
   </section>
 
@@ -116,7 +120,7 @@
       <div>
         <span class="entry-title">D4 Informatics Engineering</span>
         <div class="entry-sub"><strong>Politeknik Negeri Malang</strong> (State Polytechnic of Malang)</div>
-        <div class="entry-meta" style="padding-left: 0;">GPA: 3.53 (out of 4.00) — cumulative, semesters 1–4</div>
+        <div class="entry-meta" style="padding-left: 0;">GPA 3.53 (out of 4.00), cumulative semesters 1–4</div>
       </div>
       <span class="entry-meta">2024 – 2028 (expected)</span>
     </div>
@@ -136,9 +140,10 @@
         <span class="entry-title">Head of Internal Department</span>
         <span class="entry-meta">February 2026 – present</span>
       </div>
-      <div class="entry-sub"><strong>HMTI — Information Technology Student Association</strong>, Politeknik Negeri Malang</div>
+      <div class="entry-sub"><strong>HMTI Polinema</strong> — Information Technology Student Association, Politeknik Negeri Malang</div>
       <ul>
-        <li>Led the internal department of HMTI Polinema: coordinated the agenda, distributed tasks, and maintained communication across members.</li>
+        <li>Led the internal department of the Information Technology Student Association at Politeknik Negeri Malang.</li>
+        <li>Coordinated the agenda, distributed tasks, and maintained communication across members.</li>
       </ul>
     </div>
     <div class="entry">
@@ -168,17 +173,6 @@
     </div>
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">SmartReceipt Analyzer — Offline Receipt App</span>
-        <span class="entry-meta">2026</span>
-      </div>
-      <ul>
-        <li>Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 categories, 6,026 samples) that runs entirely offline inside a Flutter app.</li>
-        <li>Wrote a receipt parser that separates items, quantities, and prices from messy OCR text, plus a spending analytics dashboard.</li>
-      </ul>
-      <div class="stack"><b>Tech stack:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
         <span class="entry-title">Software Engineering Lab Information System</span>
         <span class="entry-meta">2025</span>
       </div>
@@ -190,23 +184,34 @@
     </div>
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">New Student Admission System, SMKN 2 Singosari</span>
-        <span class="entry-meta">2023</span>
-      </div>
-      <ul>
-        <li>Built a full-stack new student admission application as a vocational high school final project, from the interface down to the server logic.</li>
-      </ul>
-      <div class="stack"><b>Tech stack:</b> Laravel, MySQL</div>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
         <span class="entry-title">Personal Portfolio — Website &amp; Online CV</span>
         <span class="entry-meta">2026</span>
       </div>
       <ul>
-        <li>Built my own portfolio site with Next.js and TypeScript: App Router, server components, animations, and a downloadable CV.</li>
+        <li>Built and deployed my own portfolio site with Next.js and TypeScript: App Router, server components, animations, and a downloadable CV.</li>
       </ul>
       <div class="stack"><b>Tech stack:</b> Next.js, React, TypeScript, Tailwind CSS — <a href="https://aldisuryasaputra.vercel.app">aldisuryasaputra.vercel.app</a></div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">SmartReceipt Analyzer — Offline Receipt App</span>
+        <span class="entry-meta">2026</span>
+      </div>
+      <ul>
+        <li>Built an OCR → text normalization → TF-IDF → Naive Bayes pipeline (15 categories, 6,026 samples) that runs entirely offline inside a Flutter app.</li>
+        <li>Wrote a receipt parser that separates items, quantities, and prices from messy OCR text, plus a spending analytics dashboard.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> Flutter, Dart, OCR, TF-IDF, Naive Bayes, SQLite</div>
+    </div>
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">New Student Admission System, SMKN 2 Singosari</span>
+        <span class="entry-meta">2023</span>
+      </div>
+      <ul>
+        <li>Built a full-stack new student admission application as a vocational high school final project, from the interface through server logic and database.</li>
+      </ul>
+      <div class="stack"><b>Tech stack:</b> Laravel, MySQL</div>
     </div>
   </section>
 
